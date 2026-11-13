@@ -66,6 +66,8 @@
   .stats { display:flex; gap:var(--sp-5); font-size:.82rem; color:var(--muted); }
   .stats b { color:var(--ink-2); font-variant-numeric: tabular-nums; }
   .chart-placeholder { font-size:.78rem; color:var(--muted); padding:var(--sp-3) 0; }
+  .chart-wrap { position:relative; height:54px; width:100%; flex:none; }
+  .chart-wrap canvas { position:absolute; inset:0; width:100% !important; height:100% !important; }
   .card-foot { margin-top:auto; padding-top:var(--sp-1); }
   .book-btn { display:inline-block; text-decoration:none; font-size:.82rem; font-weight:700; color:#06130c;
                background:linear-gradient(135deg,#1baf7a,#3987e5); padding:9px 15px; border-radius:var(--radius-sm); }
@@ -88,11 +90,11 @@
   <div class="header-row">
     <div>
       <h1>&#9992;&#65039; Flight Price Tracker</h1>
-      <div class="sub">Last checked: Nov 13, 2026 17:41 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
+      <div class="sub">Last checked: Nov 13, 2026 17:48 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
     </div>
     <nav><a href="settings.html">&#9881;&#65039; Settings</a></nav>
   </div>
-  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$248</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$29</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">37</div></div></div>
+  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$248</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$29</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">38</div></div></div>
 </header>
 <main>
   <section>
@@ -111,11 +113,11 @@
         <span>Average <b>$248</b></span>
       </div>
       
-      <canvas id="chart-BNA-LAX" height="54"></canvas>
+      <div class="chart-wrap"><canvas id="chart-BNA-LAX"></canvas></div>
       <script>
         new Chart(document.getElementById("chart-BNA-LAX"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
@@ -125,24 +127,24 @@
     <div class="card">
       <div class="card-head">
         <div class="route">Los Angeles <span class="arrow">&rarr;</span> Nashville</div>
-        <div class="price">$350</div>
+        <div class="price">$346</div>
       </div>
-      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2334</span></div>
+      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #3156</span></div>
       <div class="dates">Departs 2027-01-07 &middot; returns 2027-01-10</div>
       <div class="stats">
-        <span>Lowest seen <b>$350</b></span>
-        <span>Average <b>$350</b></span>
+        <span>Lowest seen <b>$346</b></span>
+        <span>Average <b>$349</b></span>
       </div>
       
-      <canvas id="chart-LAX-BNA" height="54"></canvas>
+      <div class="chart-wrap"><canvas id="chart-LAX-BNA"></canvas></div>
       <script>
         new Chart(document.getElementById("chart-LAX-BNA"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0, 346.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
-      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0701BNA10011?t=F917993536801799417640000946LAXLASDENBNA17996103001799754900002530BNAPIETPAATLLAX_ff2c2323df6d333aa3b23b151ac6e1de_28706&amp;search_date=08112026&amp;expected_price_uuid=01a1bcde-6fa9-8040-6f7e-98124491fc09&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=CUfeNgi6AAWF8_v8A2iEJA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=350" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0701BNA10011?t=F917993016001799331240000374LAXDENBNA17995937401799666280001329BNADENLAX_65164baaf0be12fcd5394f7d77abe80b_28572&amp;search_date=13112026&amp;expected_price_uuid=01a1d5f5-86bc-8040-2faa-4ec97ade934f&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=cU7MgP_9N_JjaTx6poSMgQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=346" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
     </div>
     
     </div>
@@ -372,16 +374,16 @@
         
         <div class="card small">
           <div class="card-head">
-            <div class="route">Los Angeles <span class="arrow">&rarr;</span> SEA</div>
-            <div class="price">$98</div>
+            <div class="route">Los Angeles <span class="arrow">&rarr;</span> CHI</div>
+            <div class="price">$97</div>
           </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #3156</span></div>
-          <div class="dates">Departs 2027-02-24</div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #1938</span></div>
+          <div class="dates">Departs 2027-01-01</div>
           <div class="stats">
-            <span>Lowest <b>$98</b></span>
-            <span>Avg <b>$98</b></span>
+            <span>Lowest <b>$97</b></span>
+            <span>Avg <b>$173</b></span>
           </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2402SEA1?t=F918034488001803482040000554LAXDENSEA_12667d4a41cd312b0b11a2f44fc372fc_8086&amp;search_date=09112026&amp;expected_price_uuid=01a1c29a-78cd-8040-65e6-debf9e47c931&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=LBg5h54TMDd5JS663-XJlw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=98" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0101CHI1?t=F917987651401798804800000541LAXATLORD_b0e6c7620071834163818ed12ebe6c2c_8043&amp;search_date=11112026&amp;expected_price_uuid=01a1c95f-bed9-8040-2e9f-210b8901252c&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=cWTxUxa7vdG31fiAdFWmuw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=97" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         </div>
       <div class="more-note">+22 more scanned from Los Angeles - <a href="settings.html">narrow this down to specific destinations</a> to see them all.</div>
@@ -395,7 +397,8 @@
     <table>
       <thead><tr><th>When</th><th>Alert</th><th>Price</th><th>Reason</th><th>Link</th></tr></thead>
       <tbody>
-        <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ORL</td><td class='num'>$133</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+        <tr><td>Nov 13, 2026 17:48 UTC</td><td>LAX-CHI</td><td class='num'>$97</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX0101CHI1?t=F917987651401798804800000541LAXATLORD_b0e6c7620071834163818ed12ebe6c2c_8043&amp;search_date=11112026&amp;expected_price_uuid=01a1c95f-bed9-8040-2e9f-210b8901252c&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=cWTxUxa7vdG31fiAdFWmuw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=97" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ORL</td><td class='num'>$133</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DEN</td><td class='num'>$29</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MIA</td><td class='num'>$135</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DTT</td><td class='num'>$141</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
@@ -419,7 +422,6 @@
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PHL</td><td class='num'>$165</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-ONT</td><td class='num'>$155</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
 <tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-WAS</td><td class='num'>$179</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-LAS</td><td class='num'>$105</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
       </tbody>
     </table>
     </div>
