@@ -1,9 +1,17 @@
 {
   "airports": {
-    "BNA": { "label": "Nashville" },
-    "LAX": { "label": "Los Angeles" },
-    "BUR": { "label": "Burbank" },
-    "SNA": { "label": "Orange County" }
+    "BNA": {
+      "label": "Nashville"
+    },
+    "LAX": {
+      "label": "Los Angeles"
+    },
+    "BUR": {
+      "label": "Burbank"
+    },
+    "SNA": {
+      "label": "Orange County"
+    }
   },
   "routes": [
     {
@@ -11,22 +19,25 @@
       "destination": "LAX",
       "threshold_price": 150,
       "currency": "USD",
-      "notes": "Nashville to LA"
+      "notes": ""
     },
     {
       "origin": "LAX",
       "destination": "BNA",
       "threshold_price": 150,
       "currency": "USD",
-      "notes": "LA to Nashville"
+      "notes": ""
     }
   ],
   "anywhere_scan": {
-    "origins": ["BNA", "LAX"],
+    "origins": [
+      "BNA",
+      "LAX"
+    ],
     "destinations": [],
     "max_price": 150,
     "currency": "USD",
-    "notes": "Flags any destination from these airports that comes in at or under max_price, or that drops well below its own historical average (mistake-fare style deals, like Going.com). Leave \"destinations\" empty for true anywhere; or list specific IATA airport codes (e.g. [\"MIA\",\"CUN\",\"LAS\"]) to only watch those. Easiest way to manage this list: use the Settings page on your dashboard instead of editing this file by hand."
+    "notes": "Flags any destination from these airports that comes in at or under max_price, or that drops well below its own historical average. Leave \"destinations\" empty for true anywhere; list IATA codes to restrict to specific places. Managed from the Settings page."
   },
   "deal_rules": {
     "drop_below_historical_avg_pct": 20,
