@@ -61,6 +61,25 @@ def _get(path: str, params: dict) -> dict:
     return payload
 
 
+def _booking_link(it: dict, origin: str | None, destination: str | None,
+                   departure: str | None, return_: str | None) -> str:
+    """A clickable link to go look at / buy the fare. Prefers Travelpayouts'
+    own deep link (goes straight to the Aviasales results for that exact
+    fare); falls back to a Google Flights search if the API didn't return
+    one, so every deal always has somewhere useful to click through to."""
+    link = it.get("link")
+    if link:
+        return link if link.startswith("http") else f"https://www.aviasales.com{link}"
+
+    if origin and destination and departure:
+        q = f"Flights from {origin} to {destination} on {departure}"
+        if return_:
+            q += f" through {return_}"
+        from urllib.parse import quote
+        return f"https://www.google.com/travel/flights?q={quote(q)}"
+    return ""
+
+
 def _parse_items(payload: dict, origin: str | None = None) -> list[dict]:
     data = payload.get("data")
     items: list[dict] = []
@@ -85,13 +104,21 @@ def _parse_items(payload: dict, origin: str | None = None) -> list[dict]:
         price = it.get("price", it.get("value"))
         if price is None:
             continue
+        dest = it.get("destination")
+        dep = it.get("departure_at") or it.get("depart_date")
+        ret = it.get("return_at") or it.get("return_date")
         out.append(
             {
                 "origin": it.get("origin", origin),
-                "destination": it.get("destination"),
-                "departureDate": it.get("departure_at") or it.get("depart_date"),
-                "returnDate": it.get("return_at") or it.get("return_date"),
+                "destination": dest,
+                "departureDate": dep,
+                "returnDate": ret,
                 "price": float(price),
+                "link": _booking_link(it, it.get("origin", origin), dest, dep, ret),
+                "airline": it.get("airline"),
+                "flightNumber": it.get("flight_number"),
+                "duration": it.get("duration"),
+                "transfers": it.get("transfers", it.get("transfer")),
             }
         )
     return out

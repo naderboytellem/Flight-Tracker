@@ -5,20 +5,26 @@ it checks your routes on a schedule, remembers what prices normally look like,
 and pings your phone, computer, and email the moment something is a real deal
 (at/under a price you set, a new historical low, or a big drop vs. the recent
 average) — for both specific routes (Nashville ↔ LA) and "anywhere" scans from
-your home airports.
+your home airports, restricted to whatever destinations you actually want to
+watch. Every fare shown includes the airline and a "Book / view fare" link
+straight through to Aviasales (or a Google Flights search as a fallback) so
+you can actually go buy it, not just see a number.
 
 It runs for free on GitHub Actions (the schedule), GitHub Pages (the
-dashboard) and your own accounts for data + alerts (Amadeus, ntfy.sh, email).
-Nothing needs to stay running on your computer.
+dashboard + settings app) and your own accounts for data + alerts
+(Travelpayouts, ntfy.sh, email). Nothing needs to stay running on your
+computer.
 
 ## What's inside
 
-- `config.json` — your airports, routes, price thresholds, and deal rules.
-- `src/travelpayouts_client.py` — talks to the Travelpayouts (Aviasales) flight-price API.
+- `config.json` — your airports, routes, destinations to watch, price thresholds, and deal rules. Normally you won't touch this by hand - see "Changing what it tracks" below.
+- `src/travelpayouts_client.py` — talks to the Travelpayouts (Aviasales) flight-price API, including booking links and flight details.
+- `src/airlines.py` — IATA airline code → name lookup (so alerts/dashboard say "Delta" instead of "DL").
 - `src/storage.py` — keeps price history in `data/price_history.json` (committed to the repo each run, so it's just a readable file, not a database).
-- `src/alerts.py` — sends email (SMTP) and push (ntfy.sh) alerts.
+- `src/alerts.py` — sends email (SMTP) and push (ntfy.sh) alerts, each with a tappable link straight to the fare.
 - `src/check_prices.py` — the main script: checks prices, decides what's a deal, fires alerts.
-- `src/dashboard.py` — rebuilds `docs/index.html`, a dark little dashboard of current prices, history, and recent alerts.
+- `src/dashboard.py` — rebuilds `docs/index.html`, a dashboard of current prices, airlines, history, and recent alerts, each with a "Book" button.
+- `docs/settings.html` — a small in-browser app for changing what's tracked, without touching code or JSON by hand.
 - `.github/workflows/check-prices.yml` — runs the check every 6 hours automatically, and commits the updated data + dashboard.
 
 ## One-time setup (about 15–20 minutes total)
@@ -73,12 +79,25 @@ If you don't already have a GitHub account, make a free one at github.com.
 
 ## Changing what it tracks
 
-Edit `config.json`:
-- `routes` — add/remove specific origin→destination pairs and a `threshold_price` for each.
-- `anywhere_scan.origins` — which airports get scanned for "anywhere" deals, and `max_price` as the anywhere cutoff.
-- `deal_rules` — how big a drop counts as a deal, and how many hours before re-alerting on the same route.
+Open your dashboard and click **⚙️ Settings** (`https://<you>.github.io/<repo>/settings.html`).
+It's a small app that reads and writes `config.json` directly through GitHub's API —
+no copying JSON around, no editing files on github.com. From there you can:
 
-Just ask me to edit it and I'll make the change and hand you the updated file (or push it, if I have your repo access).
+- add/remove airports you fly from
+- add/remove specific routes and each one's alert price
+- turn "anywhere" scanning on per-airport, cap it at a max price, and restrict it to
+  specific destinations (or leave that list empty to scan truly anywhere)
+- tune how big a price drop counts as a deal, and the re-alert cooldown
+- click **Run a check now** to trigger an immediate check instead of waiting up to 6 hours
+
+The one thing it asks for is a GitHub **personal access token**, so it's allowed to save
+your changes back to the repo. The page walks you through generating one (scoped to just
+this repo) and saves it only in your own browser — it's never sent anywhere but
+`api.github.com`. You only have to do that once per browser/device.
+
+Prefer editing the file directly instead? `config.json` has the same fields, with comments
+in each `notes` field explaining what they do — edit it on github.com like before, the
+Settings app will just pick up whatever's there next time you open it.
 
 ## Good to know
 

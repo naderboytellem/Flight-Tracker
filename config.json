@@ -23,9 +23,10 @@
   ],
   "anywhere_scan": {
     "origins": ["BNA", "LAX"],
-    "max_price": 180,
+    "destinations": [],
+    "max_price": 150,
     "currency": "USD",
-    "notes": "Flags any destination from these airports that comes in at or under max_price, or that drops well below its own historical average (mistake-fare style deals, like Going.com)."
+    "notes": "Flags any destination from these airports that comes in at or under max_price, or that drops well below its own historical average (mistake-fare style deals, like Going.com). Leave \"destinations\" empty for true anywhere; or list specific IATA airport codes (e.g. [\"MIA\",\"CUN\",\"LAS\"]) to only watch those. Easiest way to manage this list: use the Settings page on your dashboard instead of editing this file by hand."
   },
   "deal_rules": {
     "drop_below_historical_avg_pct": 20,

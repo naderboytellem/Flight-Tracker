@@ -45,6 +45,12 @@ def _update_series(series: dict, price: float, extra: dict) -> dict:
     series["min_seen"] = min(prices)
     series["avg_seen"] = round(sum(prices) / len(prices), 2)
     series["last_price"] = price
+    # Carry the latest snapshot's extra details (booking link, airline,
+    # flight number, dates, ...) up onto the series itself so the dashboard
+    # can read them directly without digging through `samples`.
+    for k, v in extra.items():
+        if v not in (None, ""):
+            series[f"last_{k}"] = v
     return series
 
 

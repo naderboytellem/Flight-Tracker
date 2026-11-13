@@ -19,6 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 import travelpayouts_client as flight_client  # noqa: E402
+import airlines  # noqa: E402
 import alerts  # noqa: E402
 import storage  # noqa: E402
 
@@ -82,7 +83,13 @@ def check_routes(cfg: dict, history: dict, budget: "AlertBudget") -> None:
 
         series = storage.update_route(
             history, origin, dest, best["price"],
-            {"departureDate": best.get("departureDate"), "returnDate": best.get("returnDate")},
+            {
+                "departureDate": best.get("departureDate"),
+                "returnDate": best.get("returnDate"),
+                "link": best.get("link"),
+                "airline": airlines.get_airline_name(best.get("airline")),
+                "flightNumber": best.get("flightNumber"),
+            },
         )
 
         threshold = route.get("threshold_price")
@@ -111,19 +118,23 @@ def check_routes(cfg: dict, history: dict, budget: "AlertBudget") -> None:
             fire_route_alert(o_label, d_label, origin, dest, best, reason)
             storage.log_alert(history, {
                 "subject": key, "type": "route", "price": best["price"], "reason": reason,
+                "link": best.get("link"),
             })
 
 
 def fire_route_alert(o_label, d_label, origin, dest, fare, reason) -> None:
     subject = f"✈️ {o_label} → {d_label}: ${fare['price']:.0f}"
+    airline_name = airlines.get_airline_name(fare.get("airline"))
     body = (
         f"{o_label} ({origin}) to {d_label} ({dest})\n"
         f"${fare['price']:.0f} round trip, departing {fare.get('departureDate')}"
         + (f", returning {fare.get('returnDate')}" if fare.get("returnDate") else "")
+        + (f"\nAirline: {airline_name}" if airline_name else "")
         + f"\n\nWhy you're seeing this: {reason}.\n"
-        "Double-check the live price before booking - this is a snapshot, not a live quote."
+        "Double-check the live price before booking - this is a snapshot, not a live quote.\n"
+        + (f"\nBook / view: {fare.get('link')}" if fare.get("link") else "")
     )
-    alerts.fire(subject, body)
+    alerts.fire(subject, body, url=fare.get("link") or None)
 
 
 def check_anywhere(cfg: dict, history: dict, budget: "AlertBudget") -> None:
@@ -133,6 +144,10 @@ def check_anywhere(cfg: dict, history: dict, budget: "AlertBudget") -> None:
     rules = cfg.get("deal_rules", {})
     cooldown = rules.get("realert_cooldown_hours", 24)
     max_price = scan.get("max_price")
+    # Optional allow-list of destination IATA codes, e.g. ["MIA","CUN","LAS"].
+    # Empty/absent = truly "anywhere", like Going.com. Set via config.json or
+    # the Settings page.
+    wanted_destinations = {d.upper() for d in scan.get("destinations", []) if d}
 
     for origin in scan.get("origins", []):
         try:
@@ -142,15 +157,25 @@ def check_anywhere(cfg: dict, history: dict, budget: "AlertBudget") -> None:
             continue
 
         o_label = airport_label(cfg, origin)
+        checked = 0
         for fare in fares:
             dest = fare["destination"]
+            if wanted_destinations and dest and dest.upper() not in wanted_destinations:
+                continue
+            checked += 1
             key = f"{origin}-{dest}"
             prior = history["anywhere"].get(origin, {}).get(dest, {})
             prior_min, prior_avg = prior.get("min_seen"), prior.get("avg_seen")
 
             series = storage.update_anywhere(
                 history, origin, dest, fare["price"],
-                {"departureDate": fare.get("departureDate"), "returnDate": fare.get("returnDate")},
+                {
+                    "departureDate": fare.get("departureDate"),
+                    "returnDate": fare.get("returnDate"),
+                    "link": fare.get("link"),
+                    "airline": airlines.get_airline_name(fare.get("airline")),
+                    "flightNumber": fare.get("flightNumber"),
+                },
             )
 
             is_deal, reason = False, ""
@@ -170,19 +195,24 @@ def check_anywhere(cfg: dict, history: dict, budget: "AlertBudget") -> None:
                     print(f"[anywhere] {key}: deal held off, {reason_skip}")
                     continue
                 subject = f"🔥 Deal from {o_label}: {dest} for ${fare['price']:.0f}"
+                airline_name = airlines.get_airline_name(fare.get("airline"))
                 body = (
                     f"{o_label} ({origin}) → {dest}\n"
                     f"${fare['price']:.0f} round trip, departing {fare.get('departureDate')}"
                     + (f", returning {fare.get('returnDate')}" if fare.get("returnDate") else "")
+                    + (f"\nAirline: {airline_name}" if airline_name else "")
                     + f"\n\nWhy you're seeing this: {reason}.\n"
-                    "Double-check the live price before booking - this is a snapshot, not a live quote."
+                    "Double-check the live price before booking - this is a snapshot, not a live quote.\n"
+                    + (f"\nBook / view: {fare.get('link')}" if fare.get("link") else "")
                 )
-                alerts.fire(subject, body)
+                alerts.fire(subject, body, url=fare.get("link") or None)
                 storage.log_alert(history, {
                     "subject": key, "type": "anywhere", "price": fare["price"], "reason": reason,
+                    "link": fare.get("link"),
                 })
 
-        print(f"[anywhere] {origin}: scanned {len(fares)} destinations")
+        print(f"[anywhere] {origin}: scanned {checked}/{len(fares)} destinations"
+              + (" (filtered to your destination list)" if wanted_destinations else ""))
 
 
 def main() -> None:
