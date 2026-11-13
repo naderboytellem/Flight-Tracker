@@ -1,6 +1,1078 @@
 {
-  "alerts": [],
-  "anywhere": {},
-  "last_checked": "2026-11-13T15:53:08.345219+00:00",
-  "routes": {}
+  "alerts": [
+    {
+      "price": 126.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-NYC",
+      "ts": "2026-11-13T16:41:55.132479+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 109.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-CHI",
+      "ts": "2026-11-13T16:41:56.174437+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 140.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-FLL",
+      "ts": "2026-11-13T16:41:57.352986+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 130.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-DFW",
+      "ts": "2026-11-13T16:41:58.818064+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 101.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-ORL",
+      "ts": "2026-11-13T16:41:59.831582+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 97.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-DEN",
+      "ts": "2026-11-13T16:42:00.751683+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 104.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-TPA",
+      "ts": "2026-11-13T16:42:01.831223+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 159.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-LAX",
+      "ts": "2026-11-13T16:42:02.968243+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 151.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-BOS",
+      "ts": "2026-11-13T16:42:03.893312+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 112.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-MIA",
+      "ts": "2026-11-13T16:42:04.914172+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 103.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-SJU",
+      "ts": "2026-11-13T16:42:05.862065+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 113.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-HOU",
+      "ts": "2026-11-13T16:42:07.163883+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 105.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-LAS",
+      "ts": "2026-11-13T16:42:08.216516+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 179.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-WAS",
+      "ts": "2026-11-13T16:42:09.209535+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 155.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-ONT",
+      "ts": "2026-11-13T16:42:10.155625+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 165.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-PHL",
+      "ts": "2026-11-13T16:42:11.576066+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 124.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-CLT",
+      "ts": "2026-11-13T16:42:12.706176+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 119.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-SAV",
+      "ts": "2026-11-13T16:42:13.787006+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 145.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-SRQ",
+      "ts": "2026-11-13T16:42:15.075269+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 179.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-DTT",
+      "ts": "2026-11-13T16:42:16.176578+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 180.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "BNA-PDX",
+      "ts": "2026-11-13T16:42:17.444221+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 50.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-LAS",
+      "ts": "2026-11-13T16:42:18.935712+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 157.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-NYC",
+      "ts": "2026-11-13T16:42:19.781754+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 80.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-SFO",
+      "ts": "2026-11-13T16:42:20.685378+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 128.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-GDL",
+      "ts": "2026-11-13T16:42:21.706564+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 98.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-SEA",
+      "ts": "2026-11-13T16:42:22.777852+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 134.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-FLL",
+      "ts": "2026-11-13T16:42:23.785325+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 94.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-HOU",
+      "ts": "2026-11-13T16:42:24.709601+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 46.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-PHX",
+      "ts": "2026-11-13T16:42:25.774007+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 94.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-SJC",
+      "ts": "2026-11-13T16:42:26.825518+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 70.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-ATL",
+      "ts": "2026-11-13T16:42:27.774594+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 158.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-PDX",
+      "ts": "2026-11-13T16:42:28.606326+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 179.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-MEX",
+      "ts": "2026-11-13T16:42:29.587817+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 141.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-DTT",
+      "ts": "2026-11-13T16:42:30.485111+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 135.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-MIA",
+      "ts": "2026-11-13T16:42:31.485697+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 29.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-DEN",
+      "ts": "2026-11-13T16:42:32.368669+00:00",
+      "type": "anywhere"
+    },
+    {
+      "price": 133.0,
+      "reason": "at/under your $180 anywhere target",
+      "subject": "LAX-ORL",
+      "ts": "2026-11-13T16:42:33.401264+00:00",
+      "type": "anywhere"
+    }
+  ],
+  "anywhere": {
+    "BNA": {
+      "ACA": {
+        "avg_seen": 348.0,
+        "last_price": 348.0,
+        "min_seen": 348.0,
+        "samples": [
+          {
+            "departureDate": "2027-03-29T19:25:00-05:00",
+            "price": 348.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:11.576116+00:00"
+          }
+        ]
+      },
+      "BOS": {
+        "avg_seen": 151.0,
+        "last_price": 151.0,
+        "min_seen": 151.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-13T20:24:00-06:00",
+            "price": 151.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:02.968282+00:00"
+          }
+        ]
+      },
+      "CAI": {
+        "avg_seen": 421.0,
+        "last_price": 421.0,
+        "min_seen": 421.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-16T08:50:00-06:00",
+            "price": 421.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:59.831603+00:00"
+          }
+        ]
+      },
+      "CHI": {
+        "avg_seen": 109.0,
+        "last_price": 109.0,
+        "min_seen": 109.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-18T08:00:00-06:00",
+            "price": 109.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:55.132503+00:00"
+          }
+        ]
+      },
+      "CLT": {
+        "avg_seen": 124.0,
+        "last_price": 124.0,
+        "min_seen": 124.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-22T05:15:00-06:00",
+            "price": 124.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:11.576121+00:00"
+          }
+        ]
+      },
+      "CUN": {
+        "avg_seen": 195.0,
+        "last_price": 195.0,
+        "min_seen": 195.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-04T10:15:00-06:00",
+            "price": 195.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:11.576089+00:00"
+          }
+        ]
+      },
+      "DEN": {
+        "avg_seen": 97.0,
+        "last_price": 97.0,
+        "min_seen": 97.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-01T14:47:00-06:00",
+            "price": 97.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:59.831620+00:00"
+          }
+        ]
+      },
+      "DFW": {
+        "avg_seen": 130.0,
+        "last_price": 130.0,
+        "min_seen": 130.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-22T07:00:00-06:00",
+            "price": 130.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:57.353009+00:00"
+          }
+        ]
+      },
+      "DTT": {
+        "avg_seen": 179.0,
+        "last_price": 179.0,
+        "min_seen": 179.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-20T08:12:00-06:00",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:15.075293+00:00"
+          }
+        ]
+      },
+      "EYW": {
+        "avg_seen": 264.0,
+        "last_price": 264.0,
+        "min_seen": 264.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-22T08:56:00-06:00",
+            "price": 264.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:17.444259+00:00"
+          }
+        ]
+      },
+      "FLL": {
+        "avg_seen": 140.0,
+        "last_price": 140.0,
+        "min_seen": 140.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-22T16:48:00-06:00",
+            "price": 140.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:56.174458+00:00"
+          }
+        ]
+      },
+      "FMY": {
+        "avg_seen": 182.0,
+        "last_price": 182.0,
+        "min_seen": 182.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-16T05:35:00-06:00",
+            "price": 182.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:17.444242+00:00"
+          }
+        ]
+      },
+      "HOU": {
+        "avg_seen": 113.0,
+        "last_price": 113.0,
+        "min_seen": 113.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-01T08:15:00-06:00",
+            "price": 113.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:05.862089+00:00"
+          }
+        ]
+      },
+      "LAS": {
+        "avg_seen": 105.0,
+        "last_price": 105.0,
+        "min_seen": 105.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-07T13:42:00-06:00",
+            "price": 105.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:07.163905+00:00"
+          }
+        ]
+      },
+      "LAX": {
+        "avg_seen": 159.0,
+        "last_price": 159.0,
+        "min_seen": 159.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-07T13:42:00-06:00",
+            "price": 159.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:01.831247+00:00"
+          }
+        ]
+      },
+      "MIA": {
+        "avg_seen": 112.0,
+        "last_price": 112.0,
+        "min_seen": 112.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-12T18:34:00-06:00",
+            "price": 112.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:03.893335+00:00"
+          }
+        ]
+      },
+      "NYC": {
+        "avg_seen": 126.0,
+        "last_price": 126.0,
+        "min_seen": 126.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-26T14:50:00-06:00",
+            "price": 126.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:53.814577+00:00"
+          }
+        ]
+      },
+      "ONT": {
+        "avg_seen": 155.0,
+        "last_price": 155.0,
+        "min_seen": 155.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-07T13:19:00-06:00",
+            "price": 155.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:09.209556+00:00"
+          }
+        ]
+      },
+      "ORL": {
+        "avg_seen": 101.0,
+        "last_price": 101.0,
+        "min_seen": 101.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-14T09:43:00-06:00",
+            "price": 101.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:41:58.818087+00:00"
+          }
+        ]
+      },
+      "PDX": {
+        "avg_seen": 180.0,
+        "last_price": 180.0,
+        "min_seen": 180.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-22T20:00:00-06:00",
+            "price": 180.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:16.176599+00:00"
+          }
+        ]
+      },
+      "PHL": {
+        "avg_seen": 165.0,
+        "last_price": 165.0,
+        "min_seen": 165.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-16T17:13:00-06:00",
+            "price": 165.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:10.155648+00:00"
+          }
+        ]
+      },
+      "PHX": {
+        "avg_seen": 310.0,
+        "last_price": 310.0,
+        "min_seen": 310.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-21T20:35:00-06:00",
+            "price": 310.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:11.576106+00:00"
+          }
+        ]
+      },
+      "SAN": {
+        "avg_seen": 379.0,
+        "last_price": 379.0,
+        "min_seen": 379.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-28T07:04:00-06:00",
+            "price": 379.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:17.444264+00:00"
+          }
+        ]
+      },
+      "SAV": {
+        "avg_seen": 119.0,
+        "last_price": 119.0,
+        "min_seen": 119.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-07T16:45:00-06:00",
+            "price": 119.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:12.706199+00:00"
+          }
+        ]
+      },
+      "SEA": {
+        "avg_seen": 227.0,
+        "last_price": 227.0,
+        "min_seen": 227.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-20T17:30:00-06:00",
+            "price": 227.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:11.576112+00:00"
+          }
+        ]
+      },
+      "SJU": {
+        "avg_seen": 103.0,
+        "last_price": 103.0,
+        "min_seen": 103.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-03T18:09:00-06:00",
+            "price": 103.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:04.914195+00:00"
+          }
+        ]
+      },
+      "SRQ": {
+        "avg_seen": 145.0,
+        "last_price": 145.0,
+        "min_seen": 145.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-15T10:20:00-06:00",
+            "price": 145.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:13.787028+00:00"
+          }
+        ]
+      },
+      "TAS": {
+        "avg_seen": 598.0,
+        "last_price": 598.0,
+        "min_seen": 598.0,
+        "samples": [
+          {
+            "departureDate": "2027-04-18T08:00:00-05:00",
+            "price": 598.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:02.968264+00:00"
+          }
+        ]
+      },
+      "TPA": {
+        "avg_seen": 104.0,
+        "last_price": 104.0,
+        "min_seen": 104.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-30T14:55:00-06:00",
+            "price": 104.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:00.751704+00:00"
+          }
+        ]
+      },
+      "WAS": {
+        "avg_seen": 179.0,
+        "last_price": 179.0,
+        "min_seen": 179.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-20T17:30:00-06:00",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:08.216539+00:00"
+          }
+        ]
+      }
+    },
+    "LAX": {
+      "ALA": {
+        "avg_seen": 547.0,
+        "last_price": 547.0,
+        "min_seen": 547.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-29T17:10:00-08:00",
+            "price": 547.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:31.485717+00:00"
+          }
+        ]
+      },
+      "ATL": {
+        "avg_seen": 70.0,
+        "last_price": 70.0,
+        "min_seen": 70.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-14T17:20:00-08:00",
+            "price": 70.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:26.825541+00:00"
+          }
+        ]
+      },
+      "BKK": {
+        "avg_seen": 379.0,
+        "last_price": 379.0,
+        "min_seen": 379.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-10T11:00:00-08:00",
+            "price": 379.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:23.785348+00:00"
+          }
+        ]
+      },
+      "CHI": {
+        "avg_seen": 186.0,
+        "last_price": 186.0,
+        "min_seen": 186.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-23T17:57:00-08:00",
+            "price": 186.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:22.777906+00:00"
+          }
+        ]
+      },
+      "DEN": {
+        "avg_seen": 29.0,
+        "last_price": 29.0,
+        "min_seen": 29.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-15T12:26:00-08:00",
+            "price": 29.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:31.485766+00:00"
+          }
+        ]
+      },
+      "DFW": {
+        "avg_seen": 185.0,
+        "last_price": 185.0,
+        "min_seen": 185.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-24T16:50:00-08:00",
+            "price": 185.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:22.777901+00:00"
+          }
+        ]
+      },
+      "DTT": {
+        "avg_seen": 141.0,
+        "last_price": 141.0,
+        "min_seen": 141.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-22T17:59:00-08:00",
+            "price": 141.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:29.587840+00:00"
+          }
+        ]
+      },
+      "EVN": {
+        "avg_seen": 400.0,
+        "last_price": 400.0,
+        "min_seen": 400.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-11T17:10:00-08:00",
+            "price": 400.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:22.777895+00:00"
+          }
+        ]
+      },
+      "FLL": {
+        "avg_seen": 134.0,
+        "last_price": 134.0,
+        "min_seen": 134.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-15T15:10:00-08:00",
+            "price": 134.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:22.777910+00:00"
+          }
+        ]
+      },
+      "GDL": {
+        "avg_seen": 128.0,
+        "last_price": 128.0,
+        "min_seen": 128.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-18T18:33:00-08:00",
+            "price": 128.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:20.685419+00:00"
+          }
+        ]
+      },
+      "GUA": {
+        "avg_seen": 236.0,
+        "last_price": 236.0,
+        "min_seen": 236.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-23T08:01:00-08:00",
+            "price": 236.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:21.706584+00:00"
+          }
+        ]
+      },
+      "HNL": {
+        "avg_seen": 184.0,
+        "last_price": 184.0,
+        "min_seen": 184.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-30T17:05:00-08:00",
+            "price": 184.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:24.709624+00:00"
+          }
+        ]
+      },
+      "HOU": {
+        "avg_seen": 94.0,
+        "last_price": 94.0,
+        "min_seen": 94.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-06T06:30:00-08:00",
+            "price": 94.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:23.785365+00:00"
+          }
+        ]
+      },
+      "IST": {
+        "avg_seen": 350.0,
+        "last_price": 350.0,
+        "min_seen": 350.0,
+        "samples": [
+          {
+            "departureDate": "2027-10-27T17:30:00-07:00",
+            "price": 350.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:24.709641+00:00"
+          }
+        ]
+      },
+      "LAS": {
+        "avg_seen": 50.0,
+        "last_price": 50.0,
+        "min_seen": 50.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-05T09:34:00-08:00",
+            "price": 50.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:17.598767+00:00"
+          }
+        ]
+      },
+      "LON": {
+        "avg_seen": 255.0,
+        "last_price": 255.0,
+        "min_seen": 255.0,
+        "samples": [
+          {
+            "departureDate": "2027-05-04T10:20:00-07:00",
+            "price": 255.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:31.485759+00:00"
+          }
+        ]
+      },
+      "MEX": {
+        "avg_seen": 179.0,
+        "last_price": 179.0,
+        "min_seen": 179.0,
+        "samples": [
+          {
+            "departureDate": "2026-11-28T18:33:00-08:00",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:28.606348+00:00"
+          }
+        ]
+      },
+      "MIA": {
+        "avg_seen": 135.0,
+        "last_price": 135.0,
+        "min_seen": 135.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-15T21:47:00-08:00",
+            "price": 135.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:30.485134+00:00"
+          }
+        ]
+      },
+      "MNL": {
+        "avg_seen": 273.0,
+        "last_price": 273.0,
+        "min_seen": 273.0,
+        "samples": [
+          {
+            "departureDate": "2027-03-25T17:10:00-07:00",
+            "price": 273.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:24.709647+00:00"
+          }
+        ]
+      },
+      "MOW": {
+        "avg_seen": 523.0,
+        "last_price": 523.0,
+        "min_seen": 523.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-21T15:00:00-08:00",
+            "price": 523.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:21.706600+00:00"
+          }
+        ]
+      },
+      "NYC": {
+        "avg_seen": 157.0,
+        "last_price": 157.0,
+        "min_seen": 157.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-09T00:59:00-08:00",
+            "price": 157.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:18.935752+00:00"
+          }
+        ]
+      },
+      "ORL": {
+        "avg_seen": 133.0,
+        "last_price": 133.0,
+        "min_seen": 133.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-23T15:25:00-08:00",
+            "price": 133.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:32.368710+00:00"
+          }
+        ]
+      },
+      "PDX": {
+        "avg_seen": 158.0,
+        "last_price": 158.0,
+        "min_seen": 158.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-27T15:32:00-08:00",
+            "price": 158.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:27.774617+00:00"
+          }
+        ]
+      },
+      "PHX": {
+        "avg_seen": 46.0,
+        "last_price": 46.0,
+        "min_seen": 46.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-15T07:00:00-08:00",
+            "price": 46.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:24.709651+00:00"
+          }
+        ]
+      },
+      "SAL": {
+        "avg_seen": 338.0,
+        "last_price": 338.0,
+        "min_seen": 338.0,
+        "samples": [
+          {
+            "departureDate": "2026-12-20T22:03:00-08:00",
+            "price": 338.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:20.685401+00:00"
+          }
+        ]
+      },
+      "SEA": {
+        "avg_seen": 98.0,
+        "last_price": 98.0,
+        "min_seen": 98.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-24T06:00:00-08:00",
+            "price": 98.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:21.706605+00:00"
+          }
+        ]
+      },
+      "SFO": {
+        "avg_seen": 80.0,
+        "last_price": 80.0,
+        "min_seen": 80.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-02T19:18:00-08:00",
+            "price": 80.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:19.781776+00:00"
+          }
+        ]
+      },
+      "SGN": {
+        "avg_seen": 374.0,
+        "last_price": 374.0,
+        "min_seen": 374.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-11T22:05:00-08:00",
+            "price": 374.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:32.368692+00:00"
+          }
+        ]
+      },
+      "SJC": {
+        "avg_seen": 94.0,
+        "last_price": 94.0,
+        "min_seen": 94.0,
+        "samples": [
+          {
+            "departureDate": "2027-01-02T19:46:00-08:00",
+            "price": 94.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:25.774030+00:00"
+          }
+        ]
+      },
+      "TYO": {
+        "avg_seen": 301.0,
+        "last_price": 301.0,
+        "min_seen": 301.0,
+        "samples": [
+          {
+            "departureDate": "2027-02-26T09:50:00-08:00",
+            "price": 301.0,
+            "returnDate": null,
+            "ts": "2026-11-13T16:42:22.777876+00:00"
+          }
+        ]
+      }
+    }
+  },
+  "last_checked": "2026-11-13T16:42:33.401346+00:00",
+  "routes": {
+    "BNA-LAX": {
+      "avg_seen": 248.0,
+      "last_price": 248.0,
+      "min_seen": 248.0,
+      "samples": [
+        {
+          "departureDate": "2026-12-15T13:19:00-06:00",
+          "price": 248.0,
+          "returnDate": "2026-12-30T16:59:00-08:00",
+          "ts": "2026-11-13T16:41:53.507604+00:00"
+        }
+      ]
+    },
+    "LAX-BNA": {
+      "avg_seen": 350.0,
+      "last_price": 350.0,
+      "min_seen": 350.0,
+      "samples": [
+        {
+          "departureDate": "2027-01-07T20:28:00-08:00",
+          "price": 350.0,
+          "returnDate": "2027-01-10T19:45:00-06:00",
+          "ts": "2026-11-13T16:41:53.689719+00:00"
+        }
+      ]
+    }
+  }
 }

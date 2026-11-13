@@ -30,12 +30,50 @@
 <body>
 <header>
   <h1>✈️ Flight Price Tracker</h1>
-  <div class="sub">Last checked: Nov 13, 2026 15:53 UTC &middot; data from Amadeus, verify before booking</div>
+  <div class="sub">Last checked: Nov 13, 2026 16:42 UTC &middot; data from Amadeus, verify before booking</div>
 </header>
 <main>
   <h2>Tracked routes</h2>
   <div class="grid">
-    <div class="muted">No data yet - runs after the first scheduled check.</div>
+    
+    <div class="card">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> Los Angeles</div>
+        <div class="price">$248</div>
+      </div>
+      <div class="stats">
+        <span>Lowest seen: <b>$248</b></span>
+        <span>Average: <b>$248</b></span>
+      </div>
+      <canvas id="chart-BNA-LAX" height="60"></canvas>
+      <script>
+        new Chart(document.getElementById("chart-BNA-LAX"), {
+          type: "line",
+          data: { labels: ["2026-11-13"], datasets: [{ data: [248.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
+          options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
+        });
+      </script>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> Nashville</div>
+        <div class="price">$350</div>
+      </div>
+      <div class="stats">
+        <span>Lowest seen: <b>$350</b></span>
+        <span>Average: <b>$350</b></span>
+      </div>
+      <canvas id="chart-LAX-BNA" height="60"></canvas>
+      <script>
+        new Chart(document.getElementById("chart-LAX-BNA"), {
+          type: "line",
+          data: { labels: ["2026-11-13"], datasets: [{ data: [350.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
+          options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
+        });
+      </script>
+    </div>
+    
   </div>
 
   <h2>Anywhere deals</h2>
@@ -43,7 +81,65 @@
   <table>
     <thead><tr><th>From</th><th>To</th><th>Current</th><th>Lowest seen</th><th>Average</th></tr></thead>
     <tbody>
-      <tr><td colspan="5" class="muted">No data yet</td></tr>
+      <tr><td>Nashville</td><td>DEN</td><td>$97</td><td>$97</td><td>$97</td></tr>
+<tr><td>Nashville</td><td>ORL</td><td>$101</td><td>$101</td><td>$101</td></tr>
+<tr><td>Nashville</td><td>SJU</td><td>$103</td><td>$103</td><td>$103</td></tr>
+<tr><td>Nashville</td><td>TPA</td><td>$104</td><td>$104</td><td>$104</td></tr>
+<tr><td>Nashville</td><td>LAS</td><td>$105</td><td>$105</td><td>$105</td></tr>
+<tr><td>Nashville</td><td>CHI</td><td>$109</td><td>$109</td><td>$109</td></tr>
+<tr><td>Nashville</td><td>MIA</td><td>$112</td><td>$112</td><td>$112</td></tr>
+<tr><td>Nashville</td><td>HOU</td><td>$113</td><td>$113</td><td>$113</td></tr>
+<tr><td>Nashville</td><td>SAV</td><td>$119</td><td>$119</td><td>$119</td></tr>
+<tr><td>Nashville</td><td>CLT</td><td>$124</td><td>$124</td><td>$124</td></tr>
+<tr><td>Nashville</td><td>NYC</td><td>$126</td><td>$126</td><td>$126</td></tr>
+<tr><td>Nashville</td><td>DFW</td><td>$130</td><td>$130</td><td>$130</td></tr>
+<tr><td>Nashville</td><td>FLL</td><td>$140</td><td>$140</td><td>$140</td></tr>
+<tr><td>Nashville</td><td>SRQ</td><td>$145</td><td>$145</td><td>$145</td></tr>
+<tr><td>Nashville</td><td>BOS</td><td>$151</td><td>$151</td><td>$151</td></tr>
+<tr><td>Nashville</td><td>ONT</td><td>$155</td><td>$155</td><td>$155</td></tr>
+<tr><td>Nashville</td><td>LAX</td><td>$159</td><td>$159</td><td>$159</td></tr>
+<tr><td>Nashville</td><td>PHL</td><td>$165</td><td>$165</td><td>$165</td></tr>
+<tr><td>Nashville</td><td>DTT</td><td>$179</td><td>$179</td><td>$179</td></tr>
+<tr><td>Nashville</td><td>WAS</td><td>$179</td><td>$179</td><td>$179</td></tr>
+<tr><td>Nashville</td><td>PDX</td><td>$180</td><td>$180</td><td>$180</td></tr>
+<tr><td>Nashville</td><td>FMY</td><td>$182</td><td>$182</td><td>$182</td></tr>
+<tr><td>Nashville</td><td>CUN</td><td>$195</td><td>$195</td><td>$195</td></tr>
+<tr><td>Nashville</td><td>SEA</td><td>$227</td><td>$227</td><td>$227</td></tr>
+<tr><td>Nashville</td><td>EYW</td><td>$264</td><td>$264</td><td>$264</td></tr>
+<tr><td>Nashville</td><td>PHX</td><td>$310</td><td>$310</td><td>$310</td></tr>
+<tr><td>Nashville</td><td>ACA</td><td>$348</td><td>$348</td><td>$348</td></tr>
+<tr><td>Nashville</td><td>SAN</td><td>$379</td><td>$379</td><td>$379</td></tr>
+<tr><td>Nashville</td><td>CAI</td><td>$421</td><td>$421</td><td>$421</td></tr>
+<tr><td>Nashville</td><td>TAS</td><td>$598</td><td>$598</td><td>$598</td></tr><tr><td>Los Angeles</td><td>DEN</td><td>$29</td><td>$29</td><td>$29</td></tr>
+<tr><td>Los Angeles</td><td>PHX</td><td>$46</td><td>$46</td><td>$46</td></tr>
+<tr><td>Los Angeles</td><td>LAS</td><td>$50</td><td>$50</td><td>$50</td></tr>
+<tr><td>Los Angeles</td><td>ATL</td><td>$70</td><td>$70</td><td>$70</td></tr>
+<tr><td>Los Angeles</td><td>SFO</td><td>$80</td><td>$80</td><td>$80</td></tr>
+<tr><td>Los Angeles</td><td>HOU</td><td>$94</td><td>$94</td><td>$94</td></tr>
+<tr><td>Los Angeles</td><td>SJC</td><td>$94</td><td>$94</td><td>$94</td></tr>
+<tr><td>Los Angeles</td><td>SEA</td><td>$98</td><td>$98</td><td>$98</td></tr>
+<tr><td>Los Angeles</td><td>GDL</td><td>$128</td><td>$128</td><td>$128</td></tr>
+<tr><td>Los Angeles</td><td>ORL</td><td>$133</td><td>$133</td><td>$133</td></tr>
+<tr><td>Los Angeles</td><td>FLL</td><td>$134</td><td>$134</td><td>$134</td></tr>
+<tr><td>Los Angeles</td><td>MIA</td><td>$135</td><td>$135</td><td>$135</td></tr>
+<tr><td>Los Angeles</td><td>DTT</td><td>$141</td><td>$141</td><td>$141</td></tr>
+<tr><td>Los Angeles</td><td>NYC</td><td>$157</td><td>$157</td><td>$157</td></tr>
+<tr><td>Los Angeles</td><td>PDX</td><td>$158</td><td>$158</td><td>$158</td></tr>
+<tr><td>Los Angeles</td><td>MEX</td><td>$179</td><td>$179</td><td>$179</td></tr>
+<tr><td>Los Angeles</td><td>HNL</td><td>$184</td><td>$184</td><td>$184</td></tr>
+<tr><td>Los Angeles</td><td>DFW</td><td>$185</td><td>$185</td><td>$185</td></tr>
+<tr><td>Los Angeles</td><td>CHI</td><td>$186</td><td>$186</td><td>$186</td></tr>
+<tr><td>Los Angeles</td><td>GUA</td><td>$236</td><td>$236</td><td>$236</td></tr>
+<tr><td>Los Angeles</td><td>LON</td><td>$255</td><td>$255</td><td>$255</td></tr>
+<tr><td>Los Angeles</td><td>MNL</td><td>$273</td><td>$273</td><td>$273</td></tr>
+<tr><td>Los Angeles</td><td>TYO</td><td>$301</td><td>$301</td><td>$301</td></tr>
+<tr><td>Los Angeles</td><td>SAL</td><td>$338</td><td>$338</td><td>$338</td></tr>
+<tr><td>Los Angeles</td><td>IST</td><td>$350</td><td>$350</td><td>$350</td></tr>
+<tr><td>Los Angeles</td><td>SGN</td><td>$374</td><td>$374</td><td>$374</td></tr>
+<tr><td>Los Angeles</td><td>BKK</td><td>$379</td><td>$379</td><td>$379</td></tr>
+<tr><td>Los Angeles</td><td>EVN</td><td>$400</td><td>$400</td><td>$400</td></tr>
+<tr><td>Los Angeles</td><td>MOW</td><td>$523</td><td>$523</td><td>$523</td></tr>
+<tr><td>Los Angeles</td><td>ALA</td><td>$547</td><td>$547</td><td>$547</td></tr>
     </tbody>
   </table>
   </div>
@@ -53,7 +149,31 @@
   <table>
     <thead><tr><th>When</th><th>Alert</th><th>Price</th><th>Reason</th></tr></thead>
     <tbody>
-      <tr><td colspan='4' class='muted'>No alerts yet</td></tr>
+      <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ORL</td><td>$133</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DEN</td><td>$29</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MIA</td><td>$135</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DTT</td><td>$141</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MEX</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PDX</td><td>$158</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ATL</td><td>$70</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SJC</td><td>$94</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PHX</td><td>$46</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-HOU</td><td>$94</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-FLL</td><td>$134</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SEA</td><td>$98</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-GDL</td><td>$128</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SFO</td><td>$80</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-NYC</td><td>$157</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-LAS</td><td>$50</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PDX</td><td>$180</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-DTT</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SRQ</td><td>$145</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SAV</td><td>$119</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-CLT</td><td>$124</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PHL</td><td>$165</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-ONT</td><td>$155</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-WAS</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-LAS</td><td>$105</td><td>at/under your $180 anywhere target</td></tr>
     </tbody>
   </table>
   </div>
