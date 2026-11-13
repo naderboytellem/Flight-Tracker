@@ -341,6 +341,15 @@
             "price": 348.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782608+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2027-03-29T19:25:00-05:00",
+            "flightNumber": "3100",
+            "link": "https://www.aviasales.com/search/BNA2903ACA1?t=AA18063483001806425400001345BNADFWCUNACA_ef3de97a05ccd8b06e650ef9406bf70e_28912&search_date=12112026&expected_price_uuid=01a1cead-5dbc-8040-6c24-22ed9751e5e3&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ONr3s41z5FNs9FnUuxPk8A&expected_price_source=share&expected_price_currency=usd&expected_price=348",
+            "price": 348.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382915+00:00"
           }
         ]
       },
@@ -415,6 +424,15 @@
             "price": 151.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782506+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-13T20:24:00-06:00",
+            "flightNumber": "3560",
+            "link": "https://www.aviasales.com/search/BNA1312BOS1?t=F917971934401797243180000769BNAMCOBOS_80a0e0fda62eaacda640d09ae03ff3f7_12397&search_date=13112026&expected_price_uuid=01a1d566-b5d6-8031-2eda-24d4dd69183c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=j3fGT-5Pe03fqPZYnOzrbw&expected_price_source=share&expected_price_currency=usd&expected_price=151",
+            "price": 151.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382828+00:00"
           }
         ]
       },
@@ -489,6 +507,15 @@
             "price": 421.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782448+00:00"
+          },
+          {
+            "airline": "Turkish Airlines",
+            "departureDate": "2026-11-16T08:50:00-06:00",
+            "flightNumber": "8567",
+            "link": "https://www.aviasales.com/search/BNA1611CAI1?t=TK17948190001794959700001865BNABOSISTCAI_8ee8c8749eb66dee8f0e2ff367c8fe90_34644&search_date=13112026&expected_price_uuid=01a1d5a7-81c9-8040-2593-862dd002940b&static_fare_key=TY%7CP0%7CH1%7CL1_1_15%7CCH0%7CR0%7CTBC1&itinerary_key=MPWmOzcRKNaqcV3xRvt32A&expected_price_source=share&expected_price_currency=usd&expected_price=421",
+            "price": 421.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382780+00:00"
           }
         ]
       },
@@ -563,6 +590,15 @@
             "price": 109.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782384+00:00"
+          },
+          {
+            "airline": "LF",
+            "departureDate": "2026-11-18T08:00:00-06:00",
+            "flightNumber": "3043",
+            "link": "https://www.aviasales.com/search/BNA1811CHI1?t=LF17949888001795002000000220BNAUINORD_6bf931a4e1528d0f7d6c0b2c6d9373d3_8922&search_date=08112026&expected_price_uuid=01a1b877-5fa1-8031-6124-7cd46e3d7156&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=DLXJj0H1CC6veKgP5UM_Qw&expected_price_source=share&expected_price_currency=usd&expected_price=109",
+            "price": 109.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382725+00:00"
           }
         ]
       },
@@ -637,6 +673,15 @@
             "price": 124.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782616+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2026-11-22T05:15:00-06:00",
+            "flightNumber": "1794",
+            "link": "https://www.aviasales.com/search/BNA2211CLT1?t=AA17953245001795333740000094BNACLT_69009a926e529f9c655edef0e334520f_10286&search_date=12112026&expected_price_uuid=01a1d0bf-bda7-8030-ab59-af6c0003930d&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=zXtBSHQTnsqJwv5TjugTYQ&expected_price_source=share&expected_price_currency=usd&expected_price=124",
+            "price": 124.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382922+00:00"
           }
         ]
       },
@@ -711,6 +756,15 @@
             "price": 195.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782583+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2026-12-04T10:15:00-06:00",
+            "flightNumber": "2295",
+            "link": "https://www.aviasales.com/search/BNA0412CUN1?t=AA17963793001796419200000605BNADFWCUN_0b5f1f91e9a1ec2eb8e7f351b6415cfd_16184&search_date=13112026&expected_price_uuid=01a1d300-9618-8040-2539-3822fbc54fa2&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Tw3cCSC-oukoqzoX5YdPyg&expected_price_source=share&expected_price_currency=usd&expected_price=195",
+            "price": 195.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382894+00:00"
           }
         ]
       },
@@ -785,6 +839,15 @@
             "price": 97.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782460+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-01T14:47:00-06:00",
+            "flightNumber": "2586",
+            "link": "https://www.aviasales.com/search/BNA0112DEN1?t=F917961364201796205480001211BNAMCODEN_5a2d1281f6e98dda9210c3e28e9985c4_8062&search_date=12112026&expected_price_uuid=01a1cd23-9acc-8040-a81f-ff4d87e65852&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4Yop55VAJc88PV-pPTTAPA&expected_price_source=share&expected_price_currency=usd&expected_price=97",
+            "price": 97.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382790+00:00"
           }
         ]
       },
@@ -859,6 +922,15 @@
             "price": 130.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782422+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2026-11-22T07:00:00-06:00",
+            "flightNumber": "3236",
+            "link": "https://www.aviasales.com/search/BNA2211DFW1?t=AA17953308001795339800000150BNADFW_70581814c7416ba44d0805a8f1b459ee_10765&search_date=13112026&expected_price_uuid=01a1d256-a347-8040-6ede-fa309dbc2883&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=qjiQOjudjPAWAZ-NV-gbxA&expected_price_source=share&expected_price_currency=usd&expected_price=130",
+            "price": 130.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382758+00:00"
           }
         ]
       },
@@ -933,6 +1005,15 @@
             "price": 179.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782648+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-20T08:12:00-06:00",
+            "flightNumber": "1286",
+            "link": "https://www.aviasales.com/search/BNA2011DTT1?t=F917951623201795192680000446BNAMCODTW_bd79da7a65f7e3ac16ff49f02de46cf8_14889&search_date=10112026&expected_price_uuid=01a1c69a-f714-8030-25d7-c080fdd47935&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bXgYz6T17si1EX8vzKcfVg&expected_price_source=share&expected_price_currency=usd&expected_price=179",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382949+00:00"
           }
         ]
       },
@@ -1007,6 +1088,15 @@
             "price": 264.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782670+00:00"
+          },
+          {
+            "airline": "Allegiant Air",
+            "departureDate": "2026-11-22T08:56:00-06:00",
+            "flightNumber": "2753",
+            "link": "https://www.aviasales.com/search/BNA2211EYW1?t=G417953377601795430760001490BNAPITEYW_55a3bb187d4b0be42d4a133c424897cf_21859&search_date=12112026&expected_price_uuid=01a1d0d7-e810-8030-283e-0956147474b8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4HptMa-vLNYnMGnYtkpm1A&expected_price_source=share&expected_price_currency=usd&expected_price=264",
+            "price": 264.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382968+00:00"
           }
         ]
       },
@@ -1081,6 +1171,15 @@
             "price": 140.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782406+00:00"
+          },
+          {
+            "airline": "Allegiant Air",
+            "departureDate": "2026-11-22T16:48:00-06:00",
+            "flightNumber": "306",
+            "link": "https://www.aviasales.com/search/BNA2211FLL1?t=G417953660801795377420000129BNAFLL_a2376aed5c4169daf3ce09fe2f8aee2b_11526&search_date=13112026&expected_price_uuid=01a1d549-dd99-8040-2538-840134771982&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ftN9QnjJKu0acA5ywMdq3w&expected_price_source=share&expected_price_currency=usd&expected_price=140",
+            "price": 140.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382743+00:00"
           }
         ]
       },
@@ -1155,6 +1254,15 @@
             "price": 182.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782663+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2026-11-16T05:35:00-06:00",
+            "flightNumber": "2459",
+            "link": "https://www.aviasales.com/search/BNA1611FMY1?t=WN17948073001794829200000305BNAMCORSW_1b8092093ff82589828c5d34517ad74c_14939&search_date=08112026&expected_price_uuid=01a1bc47-d0fd-8040-ac70-14d4418c0f5a&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=BjrmykCzzALh3vgFwvy9qQ&expected_price_source=share&expected_price_currency=usd&expected_price=182",
+            "price": 182.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382961+00:00"
           }
         ]
       },
@@ -1229,6 +1337,15 @@
             "price": 113.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782538+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2027-01-01T08:15:00-06:00",
+            "flightNumber": "574",
+            "link": "https://www.aviasales.com/search/BNA0101HOU1?t=WN17987913001798799100000130BNAHOU_0d31a288cd654a354bc419e305b41c67_9290&search_date=06112026&expected_price_uuid=01a1b264-3a66-8040-2fc4-d964c26b7a98&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=6ARNsL3rlB34ftuvD_cdmw&expected_price_source=share&expected_price_currency=usd&expected_price=113",
+            "price": 113.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382855+00:00"
           }
         ]
       },
@@ -1303,6 +1420,15 @@
             "price": 105.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782548+00:00"
+          },
+          {
+            "airline": "Allegiant Air",
+            "departureDate": "2026-12-07T13:42:00-06:00",
+            "flightNumber": "1597",
+            "link": "https://www.aviasales.com/search/BNA0712LAS1?t=G417966509201796735280001526BNAPVULAS_8fe3d15c44f2da7d7801a80270ca82cd_8737&search_date=11112026&expected_price_uuid=01a1c8c8-be34-8040-af1f-eb3d2f8d450b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=4K2T5Le-IIItv8FqQ1ADYw&expected_price_source=share&expected_price_currency=usd&expected_price=105",
+            "price": 105.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382864+00:00"
           }
         ]
       },
@@ -1377,6 +1503,15 @@
             "price": 159.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782487+00:00"
+          },
+          {
+            "airline": "Allegiant Air",
+            "departureDate": "2026-12-07T13:42:00-06:00",
+            "flightNumber": "1597",
+            "link": "https://www.aviasales.com/search/BNA0712LAX1?t=G417966509201796718420001245BNAPVUPHXLAX_0263af5d9177c1e42e0f6be1facd83e3_13230&search_date=11112026&expected_price_uuid=01a1c8cc-b589-8040-6969-b40f722948c1&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=FWZ53H2iU7w-93_Bh2Xz3Q&expected_price_source=share&expected_price_currency=usd&expected_price=159",
+            "price": 159.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382812+00:00"
           }
         ]
       },
@@ -1451,6 +1586,15 @@
             "price": 112.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782514+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2026-12-12T18:34:00-06:00",
+            "flightNumber": "3226",
+            "link": "https://www.aviasales.com/search/BNA1212MIA1?t=AA17971004401797112800000146BNAMIA_82ddf404e960638b426b4743eb9994dc_9269&search_date=12112026&expected_price_uuid=01a1d03f-3b6d-8040-626d-e0116c9964e2&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=yiFpCurFRewHcMbtO7AK-A&expected_price_source=share&expected_price_currency=usd&expected_price=112",
+            "price": 112.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382836+00:00"
           }
         ]
       },
@@ -1525,6 +1669,15 @@
             "price": 126.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782333+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-26T14:50:00-06:00",
+            "flightNumber": "3560",
+            "link": "https://www.aviasales.com/search/BNA2611NYC1?t=F917957046001795729980000363BNAMCOEWR_7d21b1bb3bf88e8800700232e9b8d21f_10323&search_date=07112026&expected_price_uuid=01a1b456-db94-8040-af4d-1950d5ab4f06&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=rDEB5mLBMs15_ELAWSLV0w&expected_price_source=share&expected_price_currency=usd&expected_price=126",
+            "price": 126.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382669+00:00"
           }
         ]
       },
@@ -1599,6 +1752,15 @@
             "price": 155.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782567+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-07T13:19:00-06:00",
+            "flightNumber": "1401",
+            "link": "https://www.aviasales.com/search/BNA0712ONT1?t=F917966495401796689200000781BNADENONT_849f2ca57aeac117a4c9a0093ed7a461_12862&search_date=11112026&expected_price_uuid=01a1c8cc-b589-8040-6969-b40f722948c1&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=tmYK03HPgbZkma7njaZpug&expected_price_source=share&expected_price_currency=usd&expected_price=155",
+            "price": 155.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382880+00:00"
           }
         ]
       },
@@ -1673,6 +1835,15 @@
             "price": 101.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782436+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-14T09:43:00-06:00",
+            "flightNumber": "1286",
+            "link": "https://www.aviasales.com/search/BNA1411ORL1?t=F917946493801794660180000120BNAMCO_279b4e8cc8be7bb44472da2ac0eaad25_8401&search_date=10112026&expected_price_uuid=01a1c776-c9c9-8040-2799-cf962ace976d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=bV5V2ucz11X7PexmnJ0fng&expected_price_source=share&expected_price_currency=usd&expected_price=101",
+            "price": 101.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382770+00:00"
           }
         ]
       },
@@ -1747,6 +1918,15 @@
             "price": 180.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782656+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2026-12-22T20:00:00-06:00",
+            "flightNumber": "1745",
+            "link": "https://www.aviasales.com/search/BNA2212PDX1?t=WN17979696001797988500000435BNALASPDX_7deeff2e77748a9be3b9cf7e1d7ef4c4_14718&search_date=08112026&expected_price_uuid=01a1b8ca-c4aa-8031-699c-e335d51168b5&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0gbPYSesQ-9NwhIZukoBGw&expected_price_source=share&expected_price_currency=usd&expected_price=180",
+            "price": 180.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382955+00:00"
           }
         ]
       },
@@ -1821,6 +2001,15 @@
             "price": 165.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782575+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-16T17:13:00-06:00",
+            "flightNumber": "1428",
+            "link": "https://www.aviasales.com/search/BNA1611PHL1?t=F917948491801794860400000127BNAPHL_a0641208b7f1cf35ed17ef38994aa815_13530&search_date=06112026&expected_price_uuid=01a1b1f3-1460-8031-6aaa-ff8300958684&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=E-DrjUFSmzqJuahFmzXCIA&expected_price_source=share&expected_price_currency=usd&expected_price=165",
+            "price": 165.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382887+00:00"
           }
         ]
       },
@@ -1895,6 +2084,15 @@
             "price": 310.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782591+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2026-11-21T20:35:00-06:00",
+            "flightNumber": "652",
+            "link": "https://www.aviasales.com/search/BNA2111PHX1?t=WN17952933001795303200000225BNAPHX_902ff8a10472e4520b908d7c79696c08_25684&search_date=11112026&expected_price_uuid=01a1ca98-44a2-8030-6ce2-1d89e6deb45e&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=jdQbujT2NL3cTEN9Q7de0w&expected_price_source=share&expected_price_currency=usd&expected_price=310",
+            "price": 310.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382902+00:00"
           }
         ]
       },
@@ -1969,6 +2167,15 @@
             "price": 379.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782677+00:00"
+          },
+          {
+            "airline": "American Airlines",
+            "departureDate": "2026-11-28T07:04:00-06:00",
+            "flightNumber": "433",
+            "link": "https://www.aviasales.com/search/BNA2811SAN1?t=AA17958494401795867440000420BNAPHXSAN_f76f65032dff277c68f4ef1046d40e60_31251&search_date=09112026&expected_price_uuid=01a1c295-ea81-8040-aa20-7e7160d0263d&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=vyAzgsWEUwle5xLjlzVwwg&expected_price_source=share&expected_price_currency=usd&expected_price=379",
+            "price": 379.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382974+00:00"
           }
         ]
       },
@@ -2043,6 +2250,15 @@
             "price": 119.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782628+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2026-12-07T16:45:00-06:00",
+            "flightNumber": "724",
+            "link": "https://www.aviasales.com/search/BNA0712SAV1?t=WN17966619001796670600000085BNASAV_60d2857076af2afcdd70d587230eb447_9750&search_date=07112026&expected_price_uuid=01a1b719-e2bd-8040-afcb-4ecc4aeadb32&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=r1Zzzh6f6gearJNcUSr8ZQ&expected_price_source=share&expected_price_currency=usd&expected_price=119",
+            "price": 119.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382931+00:00"
           }
         ]
       },
@@ -2117,6 +2333,15 @@
             "price": 227.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782599+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-20T17:30:00-06:00",
+            "flightNumber": "2139",
+            "link": "https://www.aviasales.com/search/BNA2011SEA1?t=F917951958001795264620001267BNALASSEA_e0f6fa5e8ac9bb7aaebb1c7347861b28_18795&search_date=12112026&expected_price_uuid=01a1d222-5d8e-8030-62aa-d33b5752b8c0&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=yQ6F0FC0-vRLONQwb8dLFg&expected_price_source=share&expected_price_currency=usd&expected_price=227",
+            "price": 227.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382909+00:00"
           }
         ]
       },
@@ -2191,6 +2416,15 @@
             "price": 103.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782525+00:00"
+          },
+          {
+            "airline": "JetBlue",
+            "departureDate": "2026-12-03T18:09:00-06:00",
+            "flightNumber": "682",
+            "link": "https://www.aviasales.com/search/BNA0312SJU1?t=B617963213401796349540000350BNAFLLSJU_9eed34876f48197105655fb25f59b5f6_8560&search_date=11112026&expected_price_uuid=01a1cce5-d277-8031-6fad-154c14a0db5f&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=krMt10-o-lK4EGLgDZo9pA&expected_price_source=share&expected_price_currency=usd&expected_price=103",
+            "price": 103.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382845+00:00"
           }
         ]
       },
@@ -2265,6 +2499,15 @@
             "price": 145.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782638+00:00"
+          },
+          {
+            "airline": "Southwest Airlines",
+            "departureDate": "2026-12-15T10:20:00-06:00",
+            "flightNumber": "4767",
+            "link": "https://www.aviasales.com/search/BNA1512SRQ1?t=WN17973300001797340500000115BNASRQ_5a5c8a982dadb2d4035c7d7e2b7b22da_12041&search_date=12112026&expected_price_uuid=01a1cfb1-ec6f-8030-a020-0147bdb990b7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=nFMn-29WsjUlvLJ5Q21D2w&expected_price_source=share&expected_price_currency=usd&expected_price=145",
+            "price": 145.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382940+00:00"
           }
         ]
       },
@@ -2339,6 +2582,15 @@
             "price": 598.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782496+00:00"
+          },
+          {
+            "airline": "Air Canada",
+            "departureDate": "2027-04-18T08:00:00-05:00",
+            "flightNumber": "1228",
+            "link": "https://www.aviasales.com/search/BNA1804TAS1?t=AC18080352001808200800002160BNAYYZBCNESBTAS_468e84592fb9f3cfe246172532a59c1a_49699&search_date=12112026&expected_price_uuid=01a1cdc3-a459-8040-2c81-71c0126f8f2b&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ANEqaxWIMG4XznwA5acl9g&expected_price_source=share&expected_price_currency=usd&expected_price=598",
+            "price": 598.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382820+00:00"
           }
         ]
       },
@@ -2413,6 +2665,15 @@
             "price": 104.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782474+00:00"
+          },
+          {
+            "airline": "Allegiant Air",
+            "departureDate": "2026-11-30T14:55:00-06:00",
+            "flightNumber": "2722",
+            "link": "https://www.aviasales.com/search/BNA3011TPA1?t=G417960505001796060400000105BNAPIE_709e061bdbb726c10ebca5a00b7b2811_8521&search_date=07112026&expected_price_uuid=01a1b481-db9a-8040-af8f-b29267ae7fd9&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=PjITepgVmrIC7JQaafNVnw&expected_price_source=share&expected_price_currency=usd&expected_price=104",
+            "price": 104.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382801+00:00"
           }
         ]
       },
@@ -2487,6 +2748,15 @@
             "price": 179.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.782558+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-20T17:30:00-06:00",
+            "flightNumber": "2139",
+            "link": "https://www.aviasales.com/search/BNA2011WAS1?t=F917951958001795237800000640BNALASIAD_233885ebfebe1e1eaaa667bc59e59523_14890&search_date=10112026&expected_price_uuid=01a1c7b4-b30b-8030-6e25-292ea82dc042&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=RCx2aMnu8h3uiycatAzCHw&expected_price_source=share&expected_price_currency=usd&expected_price=179",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.382872+00:00"
           }
         ]
       }
@@ -2563,6 +2833,15 @@
             "price": 547.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927933+00:00"
+          },
+          {
+            "airline": "TAP Air Portugal",
+            "departureDate": "2026-12-29T17:10:00-08:00",
+            "flightNumber": "248",
+            "link": "https://www.aviasales.com/search/LAX2912ALA1?t=TP17985642001798778400002790LAXLISFCOSAWALA_1c9f3583a2df127482256a0209504f49_45294&search_date=13112026&expected_price_uuid=01a1d346-31ae-8040-6a42-25d685f3e6dd&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=6RXTKkiWY1dh6Usm47MCGQ&expected_price_source=share&expected_price_currency=usd&expected_price=547",
+            "price": 547.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561365+00:00"
           }
         ]
       },
@@ -2637,6 +2916,15 @@
             "price": 70.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927887+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-14T17:20:00-08:00",
+            "flightNumber": "4316",
+            "link": "https://www.aviasales.com/search/LAX1401ATL1?t=F917999472001799974560000276LAXATL_6131414e6a5072555aacf0142d2d7352_5793&search_date=10112026&expected_price_uuid=01a1c5a5-8f74-8040-6df9-fe0f0fc1bbf8&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=WANUtLKRP0aTj2WYhEnnlg&expected_price_source=share&expected_price_currency=usd&expected_price=70",
+            "price": 70.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561328+00:00"
           }
         ]
       },
@@ -2711,16 +2999,25 @@
             "price": 379.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927819+00:00"
+          },
+          {
+            "airline": "Korean Air",
+            "departureDate": "2027-02-10T11:00:00-08:00",
+            "flightNumber": "018",
+            "link": "https://www.aviasales.com/search/LAX1002BKK1?t=KE18022572001802467800002610LAXICNBKK_9c962adb87d0ca99455702114793478a_31268&search_date=09112026&expected_price_uuid=01a1c10e-86ce-8040-2146-40d8cfa514e3&static_fare_key=TY%7CP1_JW%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=OVTzb_2cA6DrTVu-BD3erg&expected_price_source=share&expected_price_currency=usd&expected_price=379",
+            "price": 379.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561276+00:00"
           }
         ]
       },
       "CHI": {
-        "avg_seen": 163.75,
+        "avg_seen": 156.89,
         "last_airline": "Frontier Airlines",
-        "last_departureDate": "2027-01-01T00:59:00-08:00",
-        "last_flightNumber": "1938",
-        "last_link": "https://www.aviasales.com/search/LAX0101CHI1?t=F917987651401798804800000541LAXATLORD_b0e6c7620071834163818ed12ebe6c2c_8043&search_date=11112026&expected_price_uuid=01a1c95f-bed9-8040-2e9f-210b8901252c&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cWTxUxa7vdG31fiAdFWmuw&expected_price_source=share&expected_price_currency=usd&expected_price=97",
-        "last_price": 97.0,
+        "last_departureDate": "2026-12-02T19:41:00-08:00",
+        "last_flightNumber": "2264",
+        "last_link": "https://www.aviasales.com/search/LAX0212CHI1?t=G417962404601796299020000856LAXLASRFD_279593a2e8179504904171dcbbca598b_8442&search_date=12112026&expected_price_uuid=01a1d058-c6ad-8040-6e29-1ac4deb114d3&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=E4S2_BEfuOMtOJNUI0QLvA&expected_price_source=share&expected_price_currency=usd&expected_price=102",
+        "last_price": 102.0,
         "min_seen": 97.0,
         "samples": [
           {
@@ -2785,6 +3082,15 @@
             "price": 97.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927797+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-02T19:41:00-08:00",
+            "flightNumber": "2264",
+            "link": "https://www.aviasales.com/search/LAX0212CHI1?t=G417962404601796299020000856LAXLASRFD_279593a2e8179504904171dcbbca598b_8442&search_date=12112026&expected_price_uuid=01a1d058-c6ad-8040-6e29-1ac4deb114d3&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=E4S2_BEfuOMtOJNUI0QLvA&expected_price_source=share&expected_price_currency=usd&expected_price=102",
+            "price": 102.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561259+00:00"
           }
         ]
       },
@@ -2859,6 +3165,15 @@
             "price": 29.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927950+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-15T12:26:00-08:00",
+            "flightNumber": "4346",
+            "link": "https://www.aviasales.com/search/LAX1512DEN1?t=F917973375601797349980000147LAXDEN_a785ecca31b035266c754988b3c5a5c6_2410&search_date=12112026&expected_price_uuid=01a1cdee-758c-8040-23a9-c1d4dbb68f4f&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=meKL9OcGXuoSqL7NFjWgNw&expected_price_source=share&expected_price_currency=usd&expected_price=29",
+            "price": 29.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561378+00:00"
           }
         ]
       },
@@ -2933,6 +3248,15 @@
             "price": 185.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927788+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-11-24T16:50:00-08:00",
+            "flightNumber": "4946",
+            "link": "https://www.aviasales.com/search/LAX2411DFW1?t=F917955390001795566240000334LAXDENDFW_fc4759b13f073af3b57679d49a241fec_15317&search_date=13112026&expected_price_uuid=01a1d2c1-b4ec-8040-2653-49363ac966eb&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ClUlnkMzu0yULG4OmHUz8w&expected_price_source=share&expected_price_currency=usd&expected_price=185",
+            "price": 185.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561251+00:00"
           }
         ]
       },
@@ -3007,6 +3331,15 @@
             "price": 141.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927913+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-22T17:59:00-08:00",
+            "flightNumber": "4316",
+            "link": "https://www.aviasales.com/search/LAX2212DTT1?t=F917979623401798017780000744LAXATLDTW_c1fa33242c6018395235c835fc8cabda_11679&search_date=12112026&expected_price_uuid=01a1ce4c-6886-8040-2993-dedded99ce9f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ACjfGzfTaAgtF87HKG57Qg&expected_price_source=share&expected_price_currency=usd&expected_price=141",
+            "price": 141.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561349+00:00"
           }
         ]
       },
@@ -3081,6 +3414,15 @@
             "price": 400.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927778+00:00"
+          },
+          {
+            "airline": "TAP Air Portugal",
+            "departureDate": "2027-02-11T17:10:00-08:00",
+            "flightNumber": "248",
+            "link": "https://www.aviasales.com/search/LAX1102EVN1?t=TP18023658001802543100002235LAXLISFCOCIAOTPEVN_d3ab240feb95f8f9c89efc7f9fa30a00_33121&search_date=12112026&expected_price_uuid=01a1d1db-f753-8040-67a1-25616797ed53&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=F-q6MFDyheqBvUEc2TwcUg&expected_price_source=share&expected_price_currency=usd&expected_price=400",
+            "price": 400.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561243+00:00"
           }
         ]
       },
@@ -3155,6 +3497,15 @@
             "price": 134.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927808+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-15T15:10:00-08:00",
+            "flightNumber": "1756",
+            "link": "https://www.aviasales.com/search/LAX1501FLL1?t=F918000258001800122880001438LAXIAHFLL_438037a607e9c4ac0fd33b8f5138d8f5_11004&search_date=13112026&expected_price_uuid=01a1d55f-cfa3-8030-2089-d6d8f431ff00&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7s4Jx26Tu8jnKYAP_nhvzw&expected_price_source=share&expected_price_currency=usd&expected_price=134",
+            "price": 134.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561267+00:00"
           }
         ]
       },
@@ -3229,6 +3580,15 @@
             "price": 128.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927704+00:00"
+          },
+          {
+            "airline": "Volaris",
+            "departureDate": "2026-11-18T18:33:00-08:00",
+            "flightNumber": "1717",
+            "link": "https://www.aviasales.com/search/LAX1811GDL1?t=Y417950267801795045500000192LAXGDL_8e26d20ea001470a2d4f4658c13f7511_10599&search_date=13112026&expected_price_uuid=01a1d28d-b394-8040-a326-893866c07f00&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=Ti7zlfK7rAuftunxYUiImg&expected_price_source=share&expected_price_currency=usd&expected_price=128",
+            "price": 128.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561201+00:00"
           }
         ]
       },
@@ -3303,6 +3663,15 @@
             "price": 236.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927716+00:00"
+          },
+          {
+            "airline": "Q6",
+            "departureDate": "2026-11-23T08:01:00-08:00",
+            "flightNumber": "4063",
+            "link": "https://www.aviasales.com/search/LAX2311GUA1?t=Q617954208601795444920000281LAXGUA_2b9838d3521a85d9d708c68cbb8c7975_19470&search_date=10112026&expected_price_uuid=01a1c338-10a8-8040-65c9-06402210198f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=8T4NonjxNaO5M2F0i-KG6w&expected_price_source=share&expected_price_currency=usd&expected_price=236",
+            "price": 236.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561212+00:00"
           }
         ]
       },
@@ -3377,6 +3746,15 @@
             "price": 184.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927837+00:00"
+          },
+          {
+            "airline": "United Airlines",
+            "departureDate": "2026-12-30T17:05:00-08:00",
+            "flightNumber": "1170",
+            "link": "https://www.aviasales.com/search/LAX3012HNL1?t=UA17986503001798664760000361LAXHNL_3c24bdc40cbee1b36be705d21d848b45_15064&search_date=09112026&expected_price_uuid=01a1bee8-5eeb-8040-2fac-1d1ac45c8f5c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=0ulEdAiZAHxX5VVWb5wwWg&expected_price_source=share&expected_price_currency=usd&expected_price=184",
+            "price": 184.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561292+00:00"
           }
         ]
       },
@@ -3451,6 +3829,15 @@
             "price": 94.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927827+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-06T06:30:00-08:00",
+            "flightNumber": "1434",
+            "link": "https://www.aviasales.com/search/LAX0612HOU1?t=F917965386001796558220000207LAXIAH_ab13b689ec6844762fd7fb015a901ead_7817&search_date=10112026&expected_price_uuid=01a1c6c1-3293-8040-a215-3beb0d748020&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=pqafhCvtgfo5iZpd6laHMw&expected_price_source=share&expected_price_currency=usd&expected_price=94",
+            "price": 94.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561283+00:00"
           }
         ]
       },
@@ -3525,6 +3912,15 @@
             "price": 350.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927846+00:00"
+          },
+          {
+            "airline": "Lufthansa",
+            "departureDate": "2027-10-27T17:30:00-07:00",
+            "flightNumber": "453",
+            "link": "https://www.aviasales.com/search/LAX2710IST1?t=LH18246582001824775500001355LAXMUCIST_b7134d1d84e76acf2d4880bd3707da3c_28696&search_date=07112026&expected_price_uuid=01a1b7df-5512-8030-6222-39932f0c8c74&static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=-seyH2VlL_043i1qBIF3pQ&expected_price_source=share&expected_price_currency=usd&expected_price=350",
+            "price": 350.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561298+00:00"
           }
         ]
       },
@@ -3599,6 +3995,15 @@
             "price": 50.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927636+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-05T09:34:00-08:00",
+            "flightNumber": "1184",
+            "link": "https://www.aviasales.com/search/LAX0501LAS1?t=F917991416401799146140000075LAXLAS_7bb3ccd0ac7da431ab8ff31a100df2c1_4125&search_date=09112026&expected_price_uuid=01a1bfe6-b8bf-8031-2c2a-17cdcd4c7314&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=7k0QmRBvJSCknbxPSthzxg&expected_price_source=share&expected_price_currency=usd&expected_price=50",
+            "price": 50.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561089+00:00"
           }
         ]
       },
@@ -3673,6 +4078,15 @@
             "price": 255.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927942+00:00"
+          },
+          {
+            "airline": "AT",
+            "departureDate": "2027-05-04T10:20:00-07:00",
+            "flightNumber": "251",
+            "link": "https://www.aviasales.com/search/LAX0405LON1?t=AT18094260001809532800001300LAXCMNLGW_68d7eedd5eb8c77ac7fea98d3e3f7fea_21144&search_date=11112026&expected_price_uuid=01a1cc0b-c496-8040-a236-e09ec6ae9006&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR0%7CTBC0&itinerary_key=fuU81hKb7bK5ZggQg8U53w&expected_price_source=share&expected_price_currency=usd&expected_price=255",
+            "price": 255.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561372+00:00"
           }
         ]
       },
@@ -3747,6 +4161,15 @@
             "price": 179.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927905+00:00"
+          },
+          {
+            "airline": "Volaris",
+            "departureDate": "2026-11-28T18:33:00-08:00",
+            "flightNumber": "1717",
+            "link": "https://www.aviasales.com/search/LAX2811MEX1?t=Y417958907801795937040000651LAXGDLTLC_aecb0eaf5ac7dafbcb62b20fa67d0acf_14822&search_date=13112026&expected_price_uuid=01a1d31e-d248-8040-6592-41a7cf967f69&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=R7kYFWO5xOa4GMVpS1OMwg&expected_price_source=share&expected_price_currency=usd&expected_price=179",
+            "price": 179.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561342+00:00"
           }
         ]
       },
@@ -3821,6 +4244,15 @@
             "price": 135.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927923+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-15T21:47:00-08:00",
+            "flightNumber": "3216",
+            "link": "https://www.aviasales.com/search/LAX1501MIA1?t=F918000496201800096960000609LAXATLMIA_c8b32355bf87b4a9feaaa3641778f155_11115&search_date=13112026&expected_price_uuid=01a1d55f-cfa3-8030-2089-d6d8f431ff00&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=DbcWRPuMGeC2rciW6YsjAQ&expected_price_source=share&expected_price_currency=usd&expected_price=135",
+            "price": 135.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561357+00:00"
           }
         ]
       },
@@ -3895,11 +4327,20 @@
             "price": 273.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927858+00:00"
+          },
+          {
+            "airline": "United Airlines",
+            "departureDate": "2027-03-25T17:10:00-07:00",
+            "flightNumber": "1170",
+            "link": "https://www.aviasales.com/search/LAX2503MNL1?t=UA18059946001806184200002260LAXHNLGUMMNL_5aca4210309dfc1350f0c417d21ea337_22392&search_date=09112026&expected_price_uuid=01a1beb4-f5d7-8040-a361-c850fdd8f980&static_fare_key=TY%7CP0%7CH0%7CL1_1_0%7CCH0%7CR0%7CTBC1&itinerary_key=EpsACufFezKuLXSoTFA-WA&expected_price_source=share&expected_price_currency=usd&expected_price=273",
+            "price": 273.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561304+00:00"
           }
         ]
       },
       "MOW": {
-        "avg_seen": 519.5,
+        "avg_seen": 519.44,
         "last_airline": "Lufthansa",
         "last_departureDate": "2027-02-15T15:00:00-08:00",
         "last_flightNumber": "8844",
@@ -3969,6 +4410,15 @@
             "price": 519.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927726+00:00"
+          },
+          {
+            "airline": "Lufthansa",
+            "departureDate": "2027-02-15T15:00:00-08:00",
+            "flightNumber": "8844",
+            "link": "https://www.aviasales.com/search/LAX1502MOW1?t=UA18027036001802821800001310LAXFRAISTSVO_ec8e374cf65918a9bf4bf7cf483b029b_42893&search_date=13112026&expected_price_uuid=01a1d5d2-d79b-8031-23fb-956433c01353&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2ecaU1eF3HQBxyrGRSKZNQ&expected_price_source=share&expected_price_currency=usd&expected_price=519",
+            "price": 519.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561219+00:00"
           }
         ]
       },
@@ -4043,6 +4493,15 @@
             "price": 157.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927666+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-09T00:59:00-08:00",
+            "flightNumber": "2274",
+            "link": "https://www.aviasales.com/search/LAX0901NYC1?t=F917994563401799524800000961LAXDFWLGA_92885c95b26b4e06f9d2f629dc9e0db4_12863&search_date=07112026&expected_price_uuid=01a1b379-73de-8030-ec2f-f52ae26b4155&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=ZZZFjzk7pIcDMLCJzb07_A&expected_price_source=share&expected_price_currency=usd&expected_price=157",
+            "price": 157.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561164+00:00"
           }
         ]
       },
@@ -4117,6 +4576,15 @@
             "price": 133.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927968+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-23T15:25:00-08:00",
+            "flightNumber": "1630",
+            "link": "https://www.aviasales.com/search/LAX2301ORL1?t=F918007179001800775140000774LAXLASMCO_adfc817d469377780457b4598cedc9b7_10897&search_date=07112026&expected_price_uuid=01a1b4a2-2722-8040-a295-610e3bae57d7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=2iBEdDackP2Vt5ijMyN93A&expected_price_source=share&expected_price_currency=usd&expected_price=133",
+            "price": 133.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561391+00:00"
           }
         ]
       },
@@ -4191,6 +4659,15 @@
             "price": 158.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927897+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-27T15:32:00-08:00",
+            "flightNumber": "1630",
+            "link": "https://www.aviasales.com/search/LAX2712PDX1?t=F917983855201798407180000361LAXLASPDX_f81d1a8ee6ca882c89b76f5910fc2746_13006&search_date=13112026&expected_price_uuid=01a1d53e-9ab1-8040-632f-74002ea67592&static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=kxVsVVKlQfuP-dVn9jqJsQ&expected_price_source=share&expected_price_currency=usd&expected_price=158",
+            "price": 158.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561336+00:00"
           }
         ]
       },
@@ -4265,6 +4742,15 @@
             "price": 46.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927866+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2026-12-15T07:00:00-08:00",
+            "flightNumber": "1184",
+            "link": "https://www.aviasales.com/search/LAX1512PHX1?t=F917973180001797341460000331LAXLASPHX_27c9823f0e6ab92cea4cad4df5434a8c_3784&search_date=13112026&expected_price_uuid=01a1d473-e9aa-8030-e255-f7182c7352a7&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=S5hKwJw2tDDj9hy5CL_0gw&expected_price_source=share&expected_price_currency=usd&expected_price=46",
+            "price": 46.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561311+00:00"
           }
         ]
       },
@@ -4339,6 +4825,15 @@
             "price": 338.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927694+00:00"
+          },
+          {
+            "airline": "Copa Airlines",
+            "departureDate": "2026-12-20T22:03:00-08:00",
+            "flightNumber": "783",
+            "link": "https://www.aviasales.com/search/LAX2012SAL1?t=CM17978041801797856860000758LAXPTYSAL_c66f758f018d9951663095224dcd3f23_27956&search_date=13112026&expected_price_uuid=01a1d347-4161-8040-23d3-3366873ae581&static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=znaNPai9lM_NNVxMpk_CSg&expected_price_source=share&expected_price_currency=usd&expected_price=338",
+            "price": 338.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561192+00:00"
           }
         ]
       },
@@ -4413,6 +4908,15 @@
             "price": 98.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927734+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-02-24T06:00:00-08:00",
+            "flightNumber": "3156",
+            "link": "https://www.aviasales.com/search/LAX2402SEA1?t=F918034488001803482040000554LAXDENSEA_12667d4a41cd312b0b11a2f44fc372fc_8086&search_date=09112026&expected_price_uuid=01a1c29a-78cd-8040-65e6-debf9e47c931&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=LBg5h54TMDd5JS663-XJlw&expected_price_source=share&expected_price_currency=usd&expected_price=98",
+            "price": 98.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561227+00:00"
           }
         ]
       },
@@ -4487,6 +4991,15 @@
             "price": 80.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927680+00:00"
+          },
+          {
+            "airline": "Frontier Airlines",
+            "departureDate": "2027-01-02T19:18:00-08:00",
+            "flightNumber": "3581",
+            "link": "https://www.aviasales.com/search/LAX0201SFO1?t=F917989174801798923660000103SNASFO_4ec6137ce5f574a6813567b41fb38452_6583&search_date=09112026&expected_price_uuid=01a1c0f3-9abd-8040-2b03-4099841ce13c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=MGojkQ6E8DXNKsZKo1YNxQ&expected_price_source=share&expected_price_currency=usd&expected_price=80",
+            "price": 80.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561179+00:00"
           }
         ]
       },
@@ -4561,6 +5074,15 @@
             "price": 374.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927960+00:00"
+          },
+          {
+            "airline": "PR",
+            "departureDate": "2027-02-11T22:05:00-08:00",
+            "flightNumber": "103",
+            "link": "https://www.aviasales.com/search/LAX1102SGN1?t=PR18023835001802508600001185LAXMNLSGN_6ac02c1167c408c097bdc8dca2cc178f_30932&search_date=11112026&expected_price_uuid=01a1cb98-cd5a-8040-230c-7452266976e6&static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&itinerary_key=HG-bJR8VrxjfTE5Rq6iP3A&expected_price_source=share&expected_price_currency=usd&expected_price=374",
+            "price": 374.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561386+00:00"
           }
         ]
       },
@@ -4635,6 +5157,15 @@
             "price": 94.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927876+00:00"
+          },
+          {
+            "airline": "Alaska Airlines",
+            "departureDate": "2027-01-02T19:46:00-08:00",
+            "flightNumber": "1442",
+            "link": "https://www.aviasales.com/search/LAX0201SJC1?t=AS17989191601798924200000084LAXSJC_e548c247b29bd6d8e523949b8cef38e1_7793&search_date=09112026&expected_price_uuid=01a1c0f3-9abd-8040-2b03-4099841ce13c&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=9BtvLDaug3vO1j6Czk3yag&expected_price_source=share&expected_price_currency=usd&expected_price=94",
+            "price": 94.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561319+00:00"
           }
         ]
       },
@@ -4709,12 +5240,21 @@
             "price": 301.0,
             "returnDate": null,
             "ts": "2026-11-13T17:49:15.927767+00:00"
+          },
+          {
+            "airline": "YP",
+            "departureDate": "2027-02-26T09:50:00-08:00",
+            "flightNumber": "102",
+            "link": "https://www.aviasales.com/search/LAX2602TYO1?t=YP18036354001803813600001950LAXICNNRT_5c21fe80f50ce4088ff15fd44766a7c1_24910&search_date=12112026&expected_price_uuid=01a1d060-2f8a-8040-2e49-5354b69ebaba&static_fare_key=TY%7CP1%7CH0%7CL1_1_20%7CCH0%7CR0%7CTBC1&itinerary_key=lDeZ75CsDUtbnfXyoaqS-g&expected_price_source=share&expected_price_currency=usd&expected_price=301",
+            "price": 301.0,
+            "returnDate": null,
+            "ts": "2026-11-13T18:06:24.561236+00:00"
           }
         ]
       }
     }
   },
-  "last_checked": "2026-11-13T17:49:15.928019+00:00",
+  "last_checked": "2026-11-13T18:06:24.561462+00:00",
   "routes": {
     "BNA-LAX": {
       "avg_seen": 248.0,
@@ -4788,11 +5328,20 @@
           "price": 248.0,
           "returnDate": "2026-12-30T16:59:00-08:00",
           "ts": "2026-11-13T17:49:15.542615+00:00"
+        },
+        {
+          "airline": "Frontier Airlines",
+          "departureDate": "2026-12-15T13:19:00-06:00",
+          "flightNumber": "1401",
+          "link": "https://www.aviasales.com/search/BNA1512LAX30121?t=F917973407401797379140000760BNADENLAX17986499401798825560002807LAXDENDFWBNA_2466d944c4262cb99c20aaca1632bb3a_20318&search_date=07112026&expected_price_uuid=01a1b4f0-c36a-8040-2e27-97cb4dc9487a&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=wmMJ0Prr8nldDTDvXejLSA&expected_price_source=share&expected_price_currency=usd&expected_price=248",
+          "price": 248.0,
+          "returnDate": "2026-12-30T16:59:00-08:00",
+          "ts": "2026-11-13T18:06:24.114717+00:00"
         }
       ]
     },
     "LAX-BNA": {
-      "avg_seen": 349.0,
+      "avg_seen": 348.67,
       "last_airline": "Frontier Airlines",
       "last_departureDate": "2027-01-07T06:00:00-08:00",
       "last_flightNumber": "3156",
@@ -4863,6 +5412,15 @@
           "price": 346.0,
           "returnDate": "2027-01-10T15:09:00-06:00",
           "ts": "2026-11-13T17:49:15.636196+00:00"
+        },
+        {
+          "airline": "Frontier Airlines",
+          "departureDate": "2027-01-07T06:00:00-08:00",
+          "flightNumber": "3156",
+          "link": "https://www.aviasales.com/search/LAX0701BNA10011?t=F917993016001799331240000374LAXDENBNA17995937401799666280001329BNADENLAX_65164baaf0be12fcd5394f7d77abe80b_28572&search_date=13112026&expected_price_uuid=01a1d5f5-86bc-8040-2faa-4ec97ade934f&static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&itinerary_key=cU7MgP_9N_JjaTx6poSMgQ&expected_price_source=share&expected_price_currency=usd&expected_price=346",
+          "price": 346.0,
+          "returnDate": "2027-01-10T15:09:00-06:00",
+          "ts": "2026-11-13T18:06:24.246725+00:00"
         }
       ]
     }
