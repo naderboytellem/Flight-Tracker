@@ -24,6 +24,11 @@ import storage  # noqa: E402
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config.json")
 
+# Safety valve: never send more than this many alerts in a single run, no
+# matter what the data says. Protects against exactly the kind of flood a
+# loose "anywhere" threshold (or any future bug) could otherwise cause.
+MAX_ALERTS_PER_RUN = 8
+
 
 def load_config() -> dict:
     with open(CONFIG_PATH) as f:
@@ -34,7 +39,27 @@ def airport_label(cfg: dict, code: str) -> str:
     return cfg.get("airports", {}).get(code, {}).get("label", code)
 
 
-def check_routes(cfg: dict, history: dict) -> None:
+class AlertBudget:
+    """Caps total alerts sent in one run, and flags a cold-start history so
+    the very first run (no baseline yet) only seeds data silently instead
+    of treating every result as a brand-new deal."""
+
+    def __init__(self, history: dict, limit: int = MAX_ALERTS_PER_RUN):
+        self.is_first_run = not history.get("routes") and not any(
+            history.get("anywhere", {}).values()
+        )
+        self.remaining = limit
+
+    def may_fire(self) -> bool:
+        if self.is_first_run:
+            return False
+        if self.remaining <= 0:
+            return False
+        self.remaining -= 1
+        return True
+
+
+def check_routes(cfg: dict, history: dict, budget: "AlertBudget") -> None:
     rules = cfg.get("deal_rules", {})
     cooldown = rules.get("realert_cooldown_hours", 24)
 
@@ -78,6 +103,10 @@ def check_routes(cfg: dict, history: dict) -> None:
             if already:
                 print(f"[routes] {key}: deal held off, alerted {already['ts']} already")
                 continue
+            if not budget.may_fire():
+                reason_skip = "first run (building baseline)" if budget.is_first_run else "per-run alert cap hit"
+                print(f"[routes] {key}: deal held off, {reason_skip}")
+                continue
             o_label, d_label = airport_label(cfg, origin), airport_label(cfg, dest)
             fire_route_alert(o_label, d_label, origin, dest, best, reason)
             storage.log_alert(history, {
@@ -97,7 +126,7 @@ def fire_route_alert(o_label, d_label, origin, dest, fare, reason) -> None:
     alerts.fire(subject, body)
 
 
-def check_anywhere(cfg: dict, history: dict) -> None:
+def check_anywhere(cfg: dict, history: dict, budget: "AlertBudget") -> None:
     scan = cfg.get("anywhere_scan")
     if not scan:
         return
@@ -136,6 +165,10 @@ def check_anywhere(cfg: dict, history: dict) -> None:
                 already = storage.recent_alert_for(history, key, cooldown)
                 if already:
                     continue
+                if not budget.may_fire():
+                    reason_skip = "first run (building baseline)" if budget.is_first_run else "per-run alert cap hit"
+                    print(f"[anywhere] {key}: deal held off, {reason_skip}")
+                    continue
                 subject = f"🔥 Deal from {o_label}: {dest} for ${fare['price']:.0f}"
                 body = (
                     f"{o_label} ({origin}) → {dest}\n"
@@ -155,9 +188,12 @@ def check_anywhere(cfg: dict, history: dict) -> None:
 def main() -> None:
     cfg = load_config()
     history = storage.load()
+    budget = AlertBudget(history)
+    if budget.is_first_run:
+        print("[check_prices] first run detected - building baseline, no alerts will be sent this run")
 
-    check_routes(cfg, history)
-    check_anywhere(cfg, history)
+    check_routes(cfg, history, budget)
+    check_anywhere(cfg, history, budget)
 
     storage.save(history)
     print("[check_prices] done")
