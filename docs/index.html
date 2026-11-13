@@ -102,11 +102,11 @@
   <div class="header-row">
     <div>
       <h1>&#9992;&#65039; Flight Price Tracker</h1>
-      <div class="sub">Last checked: Nov 13, 2026 18:06 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
+      <div class="sub">Last checked: Nov 13, 2026 18:58 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
     </div>
     <nav><button type="button" class="manage-toggle" id="btn-toggle-manage" onclick="ftToggleManage()">&#9881;&#65039; Manage</button></nav>
   </div>
-  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$248</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$29</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">38</div></div></div>
+  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$288</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$29</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">38</div></div></div>
 </header>
 
 
@@ -659,24 +659,24 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="card">
       <div class="card-head">
         <div class="route">Nashville <span class="arrow">&rarr;</span> Los Angeles</div>
-        <div class="price">$248</div>
+        <div class="price">$288</div>
       </div>
-      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #1401</span></div>
-      <div class="dates">Departs 2026-12-15 &middot; returns 2026-12-30</div>
+      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#c98500"></span>JetBlue &middot; #2582</span></div>
+      <div class="dates">Departs 2027-02-02 &middot; returns 2027-02-08</div>
       <div class="stats">
         <span>Lowest seen <b>$248</b></span>
-        <span>Average <b>$248</b></span>
+        <span>Average <b>$252</b></span>
       </div>
       
       <div class="chart-wrap"><canvas id="chart-BNA-LAX"></canvas></div>
       <script>
         new Chart(document.getElementById("chart-BNA-LAX"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 288.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
-      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1512LAX30121?t=F917973407401797379140000760BNADENLAX17986499401798825560002807LAXDENDFWBNA_2466d944c4262cb99c20aaca1632bb3a_20318&amp;search_date=07112026&amp;expected_price_uuid=01a1b4f0-c36a-8040-2e27-97cb4dc9487a&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=wmMJ0Prr8nldDTDvXejLSA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=248" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0202LAX08021?t=B618015783001801608540000624BNAFLLLAX18020664001802096220000377LAXDENBNA_569afd1b4f78cf8c3bf3d6ac2132a1cf_23927&amp;search_date=11112026&amp;expected_price_uuid=01a1cc9b-8a3a-8040-2d63-901a2ff5a6d6&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=o8pklTFAkFdQqbJKF2R1HA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=288" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
     </div>
     
     <div class="card">
@@ -688,14 +688,14 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="dates">Departs 2027-01-07 &middot; returns 2027-01-10</div>
       <div class="stats">
         <span>Lowest seen <b>$346</b></span>
-        <span>Average <b>$349</b></span>
+        <span>Average <b>$348</b></span>
       </div>
       
       <div class="chart-wrap"><canvas id="chart-LAX-BNA"></canvas></div>
       <script>
         new Chart(document.getElementById("chart-LAX-BNA"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0, 346.0, 346.0, 346.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0, 346.0, 346.0, 346.0, 346.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
@@ -718,46 +718,32 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="origin-group">
       <h3>From Nashville</h3>
       <div class="grid">
-        <div class="card small" data-origin="BNA" data-dest="DEN" data-airline="Frontier Airlines">
-          <div class="card-head">
-            <div class="route">Nashville <span class="arrow">&rarr;</span> DEN</div>
-            <div class="price">$97</div>
-          </div>
-          <div class="card-tags"><span class="badge best">&#11088; Best price here</span><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2586</span></div>
-          <div class="dates">Departs 2026-12-01</div>
-          <div class="stats">
-            <span>Lowest <b>$97</b></span>
-            <span>Avg <b>$97</b></span>
-          </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112DEN1?t=F917961364201796205480001211BNAMCODEN_5a2d1281f6e98dda9210c3e28e9985c4_8062&amp;search_date=12112026&amp;expected_price_uuid=01a1cd23-9acc-8040-a81f-ff4d87e65852&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4Yop55VAJc88PV-pPTTAPA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=97" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
-        </div>
-        
-        <div class="card small" data-origin="BNA" data-dest="ORL" data-airline="Frontier Airlines">
-          <div class="card-head">
-            <div class="route">Nashville <span class="arrow">&rarr;</span> ORL</div>
-            <div class="price">$101</div>
-          </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #1286</span></div>
-          <div class="dates">Departs 2026-11-14</div>
-          <div class="stats">
-            <span>Lowest <b>$101</b></span>
-            <span>Avg <b>$101</b></span>
-          </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1411ORL1?t=F917946493801794660180000120BNAMCO_279b4e8cc8be7bb44472da2ac0eaad25_8401&amp;search_date=10112026&amp;expected_price_uuid=01a1c776-c9c9-8040-2799-cf962ace976d&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=bV5V2ucz11X7PexmnJ0fng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=101" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
-        </div>
-        
         <div class="card small" data-origin="BNA" data-dest="SJU" data-airline="JetBlue">
           <div class="card-head">
             <div class="route">Nashville <span class="arrow">&rarr;</span> SJU</div>
             <div class="price">$103</div>
           </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#c98500"></span>JetBlue &middot; #682</span></div>
+          <div class="card-tags"><span class="badge best">&#11088; Best price here</span><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#c98500"></span>JetBlue &middot; #682</span></div>
           <div class="dates">Departs 2026-12-03</div>
           <div class="stats">
             <span>Lowest <b>$103</b></span>
             <span>Avg <b>$103</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0312SJU1?t=B617963213401796349540000350BNAFLLSJU_9eed34876f48197105655fb25f59b5f6_8560&amp;search_date=11112026&amp;expected_price_uuid=01a1cce5-d277-8031-6fad-154c14a0db5f&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=krMt10-o-lK4EGLgDZo9pA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=103" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+        </div>
+        
+        <div class="card small" data-origin="BNA" data-dest="PHL" data-airline="Frontier Airlines">
+          <div class="card-head">
+            <div class="route">Nashville <span class="arrow">&rarr;</span> PHL</div>
+            <div class="price">$104</div>
+          </div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2586</span></div>
+          <div class="dates">Departs 2027-02-02</div>
+          <div class="stats">
+            <span>Lowest <b>$104</b></span>
+            <span>Avg <b>$159</b></span>
+          </div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0202PHL1?t=F918015723001801599000000385BNAMCOPHL_a731c1e705327eec3a33cfddde04e2e2_8601&amp;search_date=13112026&amp;expected_price_uuid=01a1d61c-0258-8040-2800-02c2c513ea57&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4Wg6DY5bPOcZIaJLRMHsjA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=104" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
         <div class="card small" data-origin="BNA" data-dest="TPA" data-airline="Allegiant Air">
@@ -816,18 +802,32 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1212MIA1?t=AA17971004401797112800000146BNAMIA_82ddf404e960638b426b4743eb9994dc_9269&amp;search_date=12112026&amp;expected_price_uuid=01a1d03f-3b6d-8040-626d-e0116c9964e2&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=yiFpCurFRewHcMbtO7AK-A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=112" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
-        <div class="card small" data-origin="BNA" data-dest="HOU" data-airline="Southwest Airlines">
+        <div class="card small" data-origin="BNA" data-dest="SAV" data-airline="Southwest Airlines">
           <div class="card-head">
-            <div class="route">Nashville <span class="arrow">&rarr;</span> HOU</div>
-            <div class="price">$113</div>
+            <div class="route">Nashville <span class="arrow">&rarr;</span> SAV</div>
+            <div class="price">$119</div>
           </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#008300"></span>Southwest Airlines &middot; #574</span></div>
-          <div class="dates">Departs 2027-01-01</div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#008300"></span>Southwest Airlines &middot; #724</span></div>
+          <div class="dates">Departs 2026-12-07</div>
           <div class="stats">
-            <span>Lowest <b>$113</b></span>
-            <span>Avg <b>$113</b></span>
+            <span>Lowest <b>$119</b></span>
+            <span>Avg <b>$119</b></span>
           </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0101HOU1?t=WN17987913001798799100000130BNAHOU_0d31a288cd654a354bc419e305b41c67_9290&amp;search_date=06112026&amp;expected_price_uuid=01a1b264-3a66-8040-2fc4-d964c26b7a98&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6ARNsL3rlB34ftuvD_cdmw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=113" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712SAV1?t=WN17966619001796670600000085BNASAV_60d2857076af2afcdd70d587230eb447_9750&amp;search_date=07112026&amp;expected_price_uuid=01a1b719-e2bd-8040-afcb-4ecc4aeadb32&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=r1Zzzh6f6gearJNcUSr8ZQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=119" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+        </div>
+        
+        <div class="card small" data-origin="BNA" data-dest="DEN" data-airline="Frontier Airlines">
+          <div class="card-head">
+            <div class="route">Nashville <span class="arrow">&rarr;</span> DEN</div>
+            <div class="price">$123</div>
+          </div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2586</span></div>
+          <div class="dates">Departs 2026-12-01</div>
+          <div class="stats">
+            <span>Lowest <b>$97</b></span>
+            <span>Avg <b>$100</b></span>
+          </div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112DEN1?t=F917961364201796160600000463BNAMCODEN_e5e9e445901691c927f8b19f6f16d1cd_10173&amp;search_date=13112026&amp;expected_price_uuid=01a1d617-53f3-8040-a72b-a79809a6386b&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=tfvmBrsMz3Auhtdk6o9qng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=123" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         </div>
       <div class="more-note">+22 more scanned from Nashville - <a href="#" onclick="ftOpenManage('dest-input'); return false;">narrow this down to specific destinations</a> to see them all.</div>
