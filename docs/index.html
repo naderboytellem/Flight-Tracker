@@ -4,33 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flight Price Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   :root { color-scheme: dark; }
-  body { margin:0; font-family: -apple-system, Segoe UI, Roboto, sans-serif; background:#0f1115; color:#e8e9ec; }
-  header { padding: 28px 24px 12px; }
-  h1 { margin:0 0 4px; font-size: 1.6rem; }
-  .sub { color:#8a8f98; font-size: .9rem; }
-  main { padding: 8px 24px 48px; max-width: 1100px; margin:0 auto; }
-  h2 { font-size: 1.1rem; color:#c7cad1; margin: 32px 0 12px; }
-  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:16px; }
-  .card { background:#171a21; border:1px solid #262a33; border-radius:12px; padding:16px; }
-  .card-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
-  .route { font-weight:600; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Inter", -apple-system, Segoe UI, Roboto, sans-serif; background:#0b0d12; color:#e8e9ec; }
+  a { color:#7aa2ff; }
+  header { padding: 28px 28px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+            background:linear-gradient(135deg, rgba(91,141,239,0.12), transparent 60%); border-bottom:1px solid #1c2029; }
+  .title h1 { margin:0 0 4px; font-size: 1.7rem; font-weight:800; letter-spacing:-0.02em; }
+  .sub { color:#8a8f98; font-size: .88rem; }
+  nav a { text-decoration:none; color:#c7cad1; background:#171a21; border:1px solid #262a33; padding:9px 16px; border-radius:9px; font-size:.88rem; font-weight:600; }
+  nav a:hover { border-color:#5b8def; color:#fff; }
+  main { padding: 8px 28px 56px; max-width: 1200px; margin:0 auto; }
+  h2 { font-size: 1.05rem; color:#c7cad1; margin: 36px 0 14px; font-weight:700; letter-spacing:-0.01em; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap:16px; }
+  .card { background:#12151c; border:1px solid #20242e; border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:10px; }
+  .card.small { padding:16px; }
+  .card-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .route { font-weight:700; font-size:.98rem; }
   .arrow { color:#5b8def; }
-  .price { font-size:1.4rem; font-weight:700; color:#6fd08c; }
-  .stats { display:flex; gap:16px; font-size:.82rem; color:#9aa0ab; margin-bottom:8px; }
-  table { width:100%; border-collapse: collapse; font-size:.88rem; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #262a33; }
-  th { color:#8a8f98; font-weight:500; }
-  .muted { color:#565b66; text-align:center; }
-  .panel { background:#171a21; border:1px solid #262a33; border-radius:12px; padding:4px 16px; overflow-x:auto; }
+  .price { font-size:1.45rem; font-weight:800; color:#6fd08c; white-space:nowrap; }
+  .meta { font-size:.78rem; color:#9aa0ab; min-height:1.1em; }
+  .stats { display:flex; gap:18px; font-size:.82rem; color:#9aa0ab; }
+  .stats b { color:#dfe1e6; }
+  .chart-placeholder { font-size:.78rem; color:#565b66; padding:14px 0; }
+  .card-foot { margin-top:auto; padding-top:4px; }
+  .book-btn { display:inline-block; text-decoration:none; font-size:.82rem; font-weight:700; color:#0b0d12;
+               background:linear-gradient(135deg,#6fd08c,#5b8def); padding:8px 14px; border-radius:8px; }
+  .book-btn:hover { filter:brightness(1.08); }
+  .book-btn.disabled { background:#1c2029; color:#565b66; cursor:default; }
+  table { width:100%; border-collapse: collapse; font-size:.86rem; }
+  th, td { text-align:left; padding:10px 12px; border-bottom:1px solid #20242e; }
+  th { color:#8a8f98; font-weight:600; }
+  .muted { color:#565b66; }
+  td.muted { text-align:center; }
+  .panel { background:#12151c; border:1px solid #20242e; border-radius:14px; padding:4px 16px; overflow-x:auto; }
+  footer { max-width:1200px; margin:0 auto; padding:0 28px 48px; color:#565b66; font-size:.8rem; }
 </style>
 </head>
 <body>
 <header>
-  <h1>✈️ Flight Price Tracker</h1>
-  <div class="sub">Last checked: Nov 13, 2026 16:59 UTC &middot; data from Amadeus, verify before booking</div>
+  <div class="title">
+    <h1>&#9992;&#65039; Flight Price Tracker</h1>
+    <div class="sub">Last checked: Nov 13, 2026 17:24 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
+  </div>
+  <nav><a href="settings.html">&#9881;&#65039; Settings</a></nav>
 </header>
 <main>
   <h2>Tracked routes</h2>
@@ -41,18 +62,21 @@
         <div class="route">Nashville <span class="arrow">&rarr;</span> Los Angeles</div>
         <div class="price">$248</div>
       </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-15 &middot; returns 2026-12-30</div>
       <div class="stats">
-        <span>Lowest seen: <b>$248</b></span>
-        <span>Average: <b>$248</b></span>
+        <span>Lowest seen <b>$248</b></span>
+        <span>Average <b>$248</b></span>
       </div>
+      
       <canvas id="chart-BNA-LAX" height="60"></canvas>
       <script>
         new Chart(document.getElementById("chart-BNA-LAX"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1512LAX30121?t=F917973407401797379140000760BNADENLAX17986499401798825560002807LAXDENDFWBNA_2466d944c4262cb99c20aaca1632bb3a_20318&amp;search_date=07112026&amp;expected_price_uuid=01a1b4f0-c36a-8040-2e27-97cb4dc9487a&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=wmMJ0Prr8nldDTDvXejLSA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=248" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
     </div>
     
     <div class="card">
@@ -60,123 +84,844 @@
         <div class="route">Los Angeles <span class="arrow">&rarr;</span> Nashville</div>
         <div class="price">$350</div>
       </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-07 &middot; returns 2027-01-10</div>
       <div class="stats">
-        <span>Lowest seen: <b>$350</b></span>
-        <span>Average: <b>$350</b></span>
+        <span>Lowest seen <b>$350</b></span>
+        <span>Average <b>$350</b></span>
       </div>
+      
       <canvas id="chart-LAX-BNA" height="60"></canvas>
       <script>
         new Chart(document.getElementById("chart-LAX-BNA"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0], borderColor: "#5b8def", backgroundColor: "rgba(91,141,239,0.15)", fill: true, tension: 0.3, pointRadius: 0 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0701BNA10011?t=F917993536801799417640000946LAXLASDENBNA17996103001799754900002530BNAPIETPAATLLAX_ff2c2323df6d333aa3b23b151ac6e1de_28706&amp;search_date=08112026&amp;expected_price_uuid=01a1bcde-6fa9-8040-6f7e-98124491fc09&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=CUfeNgi6AAWF8_v8A2iEJA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=350" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
     </div>
     
   </div>
 
   <h2>Anywhere deals</h2>
-  <div class="panel">
-  <table>
-    <thead><tr><th>From</th><th>To</th><th>Current</th><th>Lowest seen</th><th>Average</th></tr></thead>
-    <tbody>
-      <tr><td>Nashville</td><td>DEN</td><td>$97</td><td>$97</td><td>$97</td></tr>
-<tr><td>Nashville</td><td>ORL</td><td>$101</td><td>$101</td><td>$101</td></tr>
-<tr><td>Nashville</td><td>SJU</td><td>$103</td><td>$103</td><td>$103</td></tr>
-<tr><td>Nashville</td><td>TPA</td><td>$104</td><td>$104</td><td>$104</td></tr>
-<tr><td>Nashville</td><td>LAS</td><td>$105</td><td>$105</td><td>$105</td></tr>
-<tr><td>Nashville</td><td>CHI</td><td>$109</td><td>$109</td><td>$109</td></tr>
-<tr><td>Nashville</td><td>MIA</td><td>$112</td><td>$112</td><td>$112</td></tr>
-<tr><td>Nashville</td><td>HOU</td><td>$113</td><td>$113</td><td>$113</td></tr>
-<tr><td>Nashville</td><td>SAV</td><td>$119</td><td>$119</td><td>$119</td></tr>
-<tr><td>Nashville</td><td>CLT</td><td>$124</td><td>$124</td><td>$124</td></tr>
-<tr><td>Nashville</td><td>NYC</td><td>$126</td><td>$126</td><td>$126</td></tr>
-<tr><td>Nashville</td><td>DFW</td><td>$130</td><td>$130</td><td>$130</td></tr>
-<tr><td>Nashville</td><td>FLL</td><td>$140</td><td>$140</td><td>$140</td></tr>
-<tr><td>Nashville</td><td>SRQ</td><td>$145</td><td>$145</td><td>$145</td></tr>
-<tr><td>Nashville</td><td>BOS</td><td>$151</td><td>$151</td><td>$151</td></tr>
-<tr><td>Nashville</td><td>ONT</td><td>$155</td><td>$155</td><td>$155</td></tr>
-<tr><td>Nashville</td><td>LAX</td><td>$159</td><td>$159</td><td>$159</td></tr>
-<tr><td>Nashville</td><td>PHL</td><td>$165</td><td>$165</td><td>$165</td></tr>
-<tr><td>Nashville</td><td>DTT</td><td>$179</td><td>$179</td><td>$179</td></tr>
-<tr><td>Nashville</td><td>WAS</td><td>$179</td><td>$179</td><td>$179</td></tr>
-<tr><td>Nashville</td><td>PDX</td><td>$180</td><td>$180</td><td>$180</td></tr>
-<tr><td>Nashville</td><td>FMY</td><td>$182</td><td>$182</td><td>$182</td></tr>
-<tr><td>Nashville</td><td>CUN</td><td>$195</td><td>$195</td><td>$195</td></tr>
-<tr><td>Nashville</td><td>SEA</td><td>$227</td><td>$227</td><td>$227</td></tr>
-<tr><td>Nashville</td><td>EYW</td><td>$264</td><td>$264</td><td>$264</td></tr>
-<tr><td>Nashville</td><td>PHX</td><td>$310</td><td>$310</td><td>$310</td></tr>
-<tr><td>Nashville</td><td>ACA</td><td>$348</td><td>$348</td><td>$348</td></tr>
-<tr><td>Nashville</td><td>SAN</td><td>$379</td><td>$379</td><td>$379</td></tr>
-<tr><td>Nashville</td><td>CAI</td><td>$421</td><td>$421</td><td>$421</td></tr>
-<tr><td>Nashville</td><td>TAS</td><td>$598</td><td>$598</td><td>$598</td></tr><tr><td>Los Angeles</td><td>DEN</td><td>$29</td><td>$29</td><td>$29</td></tr>
-<tr><td>Los Angeles</td><td>PHX</td><td>$46</td><td>$46</td><td>$46</td></tr>
-<tr><td>Los Angeles</td><td>LAS</td><td>$50</td><td>$50</td><td>$50</td></tr>
-<tr><td>Los Angeles</td><td>ATL</td><td>$70</td><td>$70</td><td>$70</td></tr>
-<tr><td>Los Angeles</td><td>SFO</td><td>$80</td><td>$80</td><td>$80</td></tr>
-<tr><td>Los Angeles</td><td>HOU</td><td>$94</td><td>$94</td><td>$94</td></tr>
-<tr><td>Los Angeles</td><td>SJC</td><td>$94</td><td>$94</td><td>$94</td></tr>
-<tr><td>Los Angeles</td><td>SEA</td><td>$98</td><td>$98</td><td>$98</td></tr>
-<tr><td>Los Angeles</td><td>GDL</td><td>$128</td><td>$128</td><td>$128</td></tr>
-<tr><td>Los Angeles</td><td>ORL</td><td>$133</td><td>$133</td><td>$133</td></tr>
-<tr><td>Los Angeles</td><td>FLL</td><td>$134</td><td>$134</td><td>$134</td></tr>
-<tr><td>Los Angeles</td><td>MIA</td><td>$135</td><td>$135</td><td>$135</td></tr>
-<tr><td>Los Angeles</td><td>DTT</td><td>$141</td><td>$141</td><td>$141</td></tr>
-<tr><td>Los Angeles</td><td>NYC</td><td>$157</td><td>$157</td><td>$157</td></tr>
-<tr><td>Los Angeles</td><td>PDX</td><td>$158</td><td>$158</td><td>$158</td></tr>
-<tr><td>Los Angeles</td><td>MEX</td><td>$179</td><td>$179</td><td>$179</td></tr>
-<tr><td>Los Angeles</td><td>HNL</td><td>$184</td><td>$184</td><td>$184</td></tr>
-<tr><td>Los Angeles</td><td>DFW</td><td>$185</td><td>$185</td><td>$185</td></tr>
-<tr><td>Los Angeles</td><td>CHI</td><td>$186</td><td>$186</td><td>$186</td></tr>
-<tr><td>Los Angeles</td><td>GUA</td><td>$236</td><td>$236</td><td>$236</td></tr>
-<tr><td>Los Angeles</td><td>LON</td><td>$255</td><td>$255</td><td>$255</td></tr>
-<tr><td>Los Angeles</td><td>MNL</td><td>$273</td><td>$273</td><td>$273</td></tr>
-<tr><td>Los Angeles</td><td>TYO</td><td>$301</td><td>$301</td><td>$301</td></tr>
-<tr><td>Los Angeles</td><td>SAL</td><td>$338</td><td>$338</td><td>$338</td></tr>
-<tr><td>Los Angeles</td><td>IST</td><td>$350</td><td>$350</td><td>$350</td></tr>
-<tr><td>Los Angeles</td><td>SGN</td><td>$374</td><td>$374</td><td>$374</td></tr>
-<tr><td>Los Angeles</td><td>BKK</td><td>$379</td><td>$379</td><td>$379</td></tr>
-<tr><td>Los Angeles</td><td>EVN</td><td>$400</td><td>$400</td><td>$400</td></tr>
-<tr><td>Los Angeles</td><td>MOW</td><td>$519</td><td>$519</td><td>$520</td></tr>
-<tr><td>Los Angeles</td><td>ALA</td><td>$547</td><td>$547</td><td>$547</td></tr>
-    </tbody>
-  </table>
+  <div class="grid">
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> DEN</div>
+        <div class="price">$97</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-01</div>
+      <div class="stats">
+        <span>Lowest <b>$97</b></span>
+        <span>Avg <b>$97</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112DEN1?t=F917961364201796205480001211BNAMCODEN_5a2d1281f6e98dda9210c3e28e9985c4_8062&amp;search_date=12112026&amp;expected_price_uuid=01a1cd23-9acc-8040-a81f-ff4d87e65852&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4Yop55VAJc88PV-pPTTAPA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=97" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> ORL</div>
+        <div class="price">$101</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-14</div>
+      <div class="stats">
+        <span>Lowest <b>$101</b></span>
+        <span>Avg <b>$101</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1411ORL1?t=F917946493801794660180000120BNAMCO_279b4e8cc8be7bb44472da2ac0eaad25_8401&amp;search_date=10112026&amp;expected_price_uuid=01a1c776-c9c9-8040-2799-cf962ace976d&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=bV5V2ucz11X7PexmnJ0fng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=101" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> SJU</div>
+        <div class="price">$103</div>
+      </div>
+      <div class="meta">JetBlue &nbsp;&bull;&nbsp; Departs 2026-12-03</div>
+      <div class="stats">
+        <span>Lowest <b>$103</b></span>
+        <span>Avg <b>$103</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0312SJU1?t=B617963213401796349540000350BNAFLLSJU_9eed34876f48197105655fb25f59b5f6_8560&amp;search_date=11112026&amp;expected_price_uuid=01a1cce5-d277-8031-6fad-154c14a0db5f&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=krMt10-o-lK4EGLgDZo9pA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=103" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> TPA</div>
+        <div class="price">$104</div>
+      </div>
+      <div class="meta">Allegiant Air &nbsp;&bull;&nbsp; Departs 2026-11-30</div>
+      <div class="stats">
+        <span>Lowest <b>$104</b></span>
+        <span>Avg <b>$104</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA3011TPA1?t=G417960505001796060400000105BNAPIE_709e061bdbb726c10ebca5a00b7b2811_8521&amp;search_date=07112026&amp;expected_price_uuid=01a1b481-db9a-8040-af8f-b29267ae7fd9&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=PjITepgVmrIC7JQaafNVnw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=104" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> LAS</div>
+        <div class="price">$105</div>
+      </div>
+      <div class="meta">Allegiant Air &nbsp;&bull;&nbsp; Departs 2026-12-07</div>
+      <div class="stats">
+        <span>Lowest <b>$105</b></span>
+        <span>Avg <b>$105</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712LAS1?t=G417966509201796735280001526BNAPVULAS_8fe3d15c44f2da7d7801a80270ca82cd_8737&amp;search_date=11112026&amp;expected_price_uuid=01a1c8c8-be34-8040-af1f-eb3d2f8d450b&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4K2T5Le-IIItv8FqQ1ADYw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=105" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> CHI</div>
+        <div class="price">$109</div>
+      </div>
+      <div class="meta">LF &nbsp;&bull;&nbsp; Departs 2026-11-18</div>
+      <div class="stats">
+        <span>Lowest <b>$109</b></span>
+        <span>Avg <b>$109</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1811CHI1?t=LF17949888001795002000000220BNAUINORD_6bf931a4e1528d0f7d6c0b2c6d9373d3_8922&amp;search_date=08112026&amp;expected_price_uuid=01a1b877-5fa1-8031-6124-7cd46e3d7156&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=DLXJj0H1CC6veKgP5UM_Qw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=109" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> MIA</div>
+        <div class="price">$112</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2026-12-12</div>
+      <div class="stats">
+        <span>Lowest <b>$112</b></span>
+        <span>Avg <b>$112</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1212MIA1?t=AA17971004401797112800000146BNAMIA_82ddf404e960638b426b4743eb9994dc_9269&amp;search_date=12112026&amp;expected_price_uuid=01a1d03f-3b6d-8040-626d-e0116c9964e2&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=yiFpCurFRewHcMbtO7AK-A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=112" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> HOU</div>
+        <div class="price">$113</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2027-01-01</div>
+      <div class="stats">
+        <span>Lowest <b>$113</b></span>
+        <span>Avg <b>$113</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0101HOU1?t=WN17987913001798799100000130BNAHOU_0d31a288cd654a354bc419e305b41c67_9290&amp;search_date=06112026&amp;expected_price_uuid=01a1b264-3a66-8040-2fc4-d964c26b7a98&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6ARNsL3rlB34ftuvD_cdmw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=113" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> SAV</div>
+        <div class="price">$119</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2026-12-07</div>
+      <div class="stats">
+        <span>Lowest <b>$119</b></span>
+        <span>Avg <b>$119</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712SAV1?t=WN17966619001796670600000085BNASAV_60d2857076af2afcdd70d587230eb447_9750&amp;search_date=07112026&amp;expected_price_uuid=01a1b719-e2bd-8040-afcb-4ecc4aeadb32&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=r1Zzzh6f6gearJNcUSr8ZQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=119" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> CLT</div>
+        <div class="price">$124</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2026-11-22</div>
+      <div class="stats">
+        <span>Lowest <b>$124</b></span>
+        <span>Avg <b>$124</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2211CLT1?t=AA17953245001795333740000094BNACLT_69009a926e529f9c655edef0e334520f_10286&amp;search_date=12112026&amp;expected_price_uuid=01a1d0bf-bda7-8030-ab59-af6c0003930d&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=zXtBSHQTnsqJwv5TjugTYQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=124" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> NYC</div>
+        <div class="price">$126</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-26</div>
+      <div class="stats">
+        <span>Lowest <b>$126</b></span>
+        <span>Avg <b>$126</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2611NYC1?t=F917957046001795729980000363BNAMCOEWR_7d21b1bb3bf88e8800700232e9b8d21f_10323&amp;search_date=07112026&amp;expected_price_uuid=01a1b456-db94-8040-af4d-1950d5ab4f06&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=rDEB5mLBMs15_ELAWSLV0w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=126" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> DFW</div>
+        <div class="price">$130</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2026-11-22</div>
+      <div class="stats">
+        <span>Lowest <b>$130</b></span>
+        <span>Avg <b>$130</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2211DFW1?t=AA17953308001795339800000150BNADFW_70581814c7416ba44d0805a8f1b459ee_10765&amp;search_date=13112026&amp;expected_price_uuid=01a1d256-a347-8040-6ede-fa309dbc2883&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=qjiQOjudjPAWAZ-NV-gbxA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=130" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> FLL</div>
+        <div class="price">$140</div>
+      </div>
+      <div class="meta">Allegiant Air &nbsp;&bull;&nbsp; Departs 2026-11-22</div>
+      <div class="stats">
+        <span>Lowest <b>$140</b></span>
+        <span>Avg <b>$140</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2211FLL1?t=G417953660801795377420000129BNAFLL_a2376aed5c4169daf3ce09fe2f8aee2b_11526&amp;search_date=13112026&amp;expected_price_uuid=01a1d549-dd99-8040-2538-840134771982&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ftN9QnjJKu0acA5ywMdq3w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=140" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> SRQ</div>
+        <div class="price">$145</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2026-12-15</div>
+      <div class="stats">
+        <span>Lowest <b>$145</b></span>
+        <span>Avg <b>$145</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1512SRQ1?t=WN17973300001797340500000115BNASRQ_5a5c8a982dadb2d4035c7d7e2b7b22da_12041&amp;search_date=12112026&amp;expected_price_uuid=01a1cfb1-ec6f-8030-a020-0147bdb990b7&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=nFMn-29WsjUlvLJ5Q21D2w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=145" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> BOS</div>
+        <div class="price">$151</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-13</div>
+      <div class="stats">
+        <span>Lowest <b>$151</b></span>
+        <span>Avg <b>$151</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1312BOS1?t=F917971934401797243180000769BNAMCOBOS_80a0e0fda62eaacda640d09ae03ff3f7_12397&amp;search_date=13112026&amp;expected_price_uuid=01a1d566-b5d6-8031-2eda-24d4dd69183c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=j3fGT-5Pe03fqPZYnOzrbw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=151" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> ONT</div>
+        <div class="price">$155</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-07</div>
+      <div class="stats">
+        <span>Lowest <b>$155</b></span>
+        <span>Avg <b>$155</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712ONT1?t=F917966495401796689200000781BNADENONT_849f2ca57aeac117a4c9a0093ed7a461_12862&amp;search_date=11112026&amp;expected_price_uuid=01a1c8cc-b589-8040-6969-b40f722948c1&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=tmYK03HPgbZkma7njaZpug&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=155" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> LAX</div>
+        <div class="price">$159</div>
+      </div>
+      <div class="meta">Allegiant Air &nbsp;&bull;&nbsp; Departs 2026-12-07</div>
+      <div class="stats">
+        <span>Lowest <b>$159</b></span>
+        <span>Avg <b>$159</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712LAX1?t=G417966509201796718420001245BNAPVUPHXLAX_0263af5d9177c1e42e0f6be1facd83e3_13230&amp;search_date=11112026&amp;expected_price_uuid=01a1c8cc-b589-8040-6969-b40f722948c1&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=FWZ53H2iU7w-93_Bh2Xz3Q&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=159" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> PHL</div>
+        <div class="price">$165</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-16</div>
+      <div class="stats">
+        <span>Lowest <b>$165</b></span>
+        <span>Avg <b>$165</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1611PHL1?t=F917948491801794860400000127BNAPHL_a0641208b7f1cf35ed17ef38994aa815_13530&amp;search_date=06112026&amp;expected_price_uuid=01a1b1f3-1460-8031-6aaa-ff8300958684&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=E-DrjUFSmzqJuahFmzXCIA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=165" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> DTT</div>
+        <div class="price">$179</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-20</div>
+      <div class="stats">
+        <span>Lowest <b>$179</b></span>
+        <span>Avg <b>$179</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2011DTT1?t=F917951623201795192680000446BNAMCODTW_bd79da7a65f7e3ac16ff49f02de46cf8_14889&amp;search_date=10112026&amp;expected_price_uuid=01a1c69a-f714-8030-25d7-c080fdd47935&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=bXgYz6T17si1EX8vzKcfVg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=179" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> WAS</div>
+        <div class="price">$179</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-20</div>
+      <div class="stats">
+        <span>Lowest <b>$179</b></span>
+        <span>Avg <b>$179</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2011WAS1?t=F917951958001795237800000640BNALASIAD_233885ebfebe1e1eaaa667bc59e59523_14890&amp;search_date=10112026&amp;expected_price_uuid=01a1c7b4-b30b-8030-6e25-292ea82dc042&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=RCx2aMnu8h3uiycatAzCHw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=179" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> PDX</div>
+        <div class="price">$180</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2026-12-22</div>
+      <div class="stats">
+        <span>Lowest <b>$180</b></span>
+        <span>Avg <b>$180</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2212PDX1?t=WN17979696001797988500000435BNALASPDX_7deeff2e77748a9be3b9cf7e1d7ef4c4_14718&amp;search_date=08112026&amp;expected_price_uuid=01a1b8ca-c4aa-8031-699c-e335d51168b5&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=0gbPYSesQ-9NwhIZukoBGw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=180" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> FMY</div>
+        <div class="price">$182</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2026-11-16</div>
+      <div class="stats">
+        <span>Lowest <b>$182</b></span>
+        <span>Avg <b>$182</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1611FMY1?t=WN17948073001794829200000305BNAMCORSW_1b8092093ff82589828c5d34517ad74c_14939&amp;search_date=08112026&amp;expected_price_uuid=01a1bc47-d0fd-8040-ac70-14d4418c0f5a&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=BjrmykCzzALh3vgFwvy9qQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=182" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> CUN</div>
+        <div class="price">$195</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2026-12-04</div>
+      <div class="stats">
+        <span>Lowest <b>$195</b></span>
+        <span>Avg <b>$195</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0412CUN1?t=AA17963793001796419200000605BNADFWCUN_0b5f1f91e9a1ec2eb8e7f351b6415cfd_16184&amp;search_date=13112026&amp;expected_price_uuid=01a1d300-9618-8040-2539-3822fbc54fa2&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=Tw3cCSC-oukoqzoX5YdPyg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=195" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> SEA</div>
+        <div class="price">$227</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-20</div>
+      <div class="stats">
+        <span>Lowest <b>$227</b></span>
+        <span>Avg <b>$227</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2011SEA1?t=F917951958001795264620001267BNALASSEA_e0f6fa5e8ac9bb7aaebb1c7347861b28_18795&amp;search_date=12112026&amp;expected_price_uuid=01a1d222-5d8e-8030-62aa-d33b5752b8c0&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=yQ6F0FC0-vRLONQwb8dLFg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=227" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> EYW</div>
+        <div class="price">$264</div>
+      </div>
+      <div class="meta">Allegiant Air &nbsp;&bull;&nbsp; Departs 2026-11-22</div>
+      <div class="stats">
+        <span>Lowest <b>$264</b></span>
+        <span>Avg <b>$264</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2211EYW1?t=G417953377601795430760001490BNAPITEYW_55a3bb187d4b0be42d4a133c424897cf_21859&amp;search_date=12112026&amp;expected_price_uuid=01a1d0d7-e810-8030-283e-0956147474b8&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4HptMa-vLNYnMGnYtkpm1A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=264" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> PHX</div>
+        <div class="price">$310</div>
+      </div>
+      <div class="meta">Southwest Airlines &nbsp;&bull;&nbsp; Departs 2026-11-21</div>
+      <div class="stats">
+        <span>Lowest <b>$310</b></span>
+        <span>Avg <b>$310</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2111PHX1?t=WN17952933001795303200000225BNAPHX_902ff8a10472e4520b908d7c79696c08_25684&amp;search_date=11112026&amp;expected_price_uuid=01a1ca98-44a2-8030-6ce2-1d89e6deb45e&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=jdQbujT2NL3cTEN9Q7de0w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=310" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> ACA</div>
+        <div class="price">$348</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2027-03-29</div>
+      <div class="stats">
+        <span>Lowest <b>$348</b></span>
+        <span>Avg <b>$348</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2903ACA1?t=AA18063483001806425400001345BNADFWCUNACA_ef3de97a05ccd8b06e650ef9406bf70e_28912&amp;search_date=12112026&amp;expected_price_uuid=01a1cead-5dbc-8040-6c24-22ed9751e5e3&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ONr3s41z5FNs9FnUuxPk8A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=348" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> SAN</div>
+        <div class="price">$379</div>
+      </div>
+      <div class="meta">American Airlines &nbsp;&bull;&nbsp; Departs 2026-11-28</div>
+      <div class="stats">
+        <span>Lowest <b>$379</b></span>
+        <span>Avg <b>$379</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2811SAN1?t=AA17958494401795867440000420BNAPHXSAN_f76f65032dff277c68f4ef1046d40e60_31251&amp;search_date=09112026&amp;expected_price_uuid=01a1c295-ea81-8040-aa20-7e7160d0263d&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=vyAzgsWEUwle5xLjlzVwwg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=379" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> CAI</div>
+        <div class="price">$421</div>
+      </div>
+      <div class="meta">Turkish Airlines &nbsp;&bull;&nbsp; Departs 2026-11-16</div>
+      <div class="stats">
+        <span>Lowest <b>$421</b></span>
+        <span>Avg <b>$421</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1611CAI1?t=TK17948190001794959700001865BNABOSISTCAI_8ee8c8749eb66dee8f0e2ff367c8fe90_34644&amp;search_date=13112026&amp;expected_price_uuid=01a1d5a7-81c9-8040-2593-862dd002940b&amp;static_fare_key=TY%7CP0%7CH1%7CL1_1_15%7CCH0%7CR0%7CTBC1&amp;itinerary_key=MPWmOzcRKNaqcV3xRvt32A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=421" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Nashville <span class="arrow">&rarr;</span> TAS</div>
+        <div class="price">$598</div>
+      </div>
+      <div class="meta">Air Canada &nbsp;&bull;&nbsp; Departs 2027-04-18</div>
+      <div class="stats">
+        <span>Lowest <b>$598</b></span>
+        <span>Avg <b>$598</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1804TAS1?t=AC18080352001808200800002160BNAYYZBCNESBTAS_468e84592fb9f3cfe246172532a59c1a_49699&amp;search_date=12112026&amp;expected_price_uuid=01a1cdc3-a459-8040-2c81-71c0126f8f2b&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ANEqaxWIMG4XznwA5acl9g&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=598" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> DEN</div>
+        <div class="price">$29</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-15</div>
+      <div class="stats">
+        <span>Lowest <b>$29</b></span>
+        <span>Avg <b>$29</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1512DEN1?t=F917973375601797349980000147LAXDEN_a785ecca31b035266c754988b3c5a5c6_2410&amp;search_date=12112026&amp;expected_price_uuid=01a1cdee-758c-8040-23a9-c1d4dbb68f4f&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=meKL9OcGXuoSqL7NFjWgNw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=29" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> PHX</div>
+        <div class="price">$46</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-15</div>
+      <div class="stats">
+        <span>Lowest <b>$46</b></span>
+        <span>Avg <b>$46</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1512PHX1?t=F917973180001797341460000331LAXLASPHX_27c9823f0e6ab92cea4cad4df5434a8c_3784&amp;search_date=13112026&amp;expected_price_uuid=01a1d473-e9aa-8030-e255-f7182c7352a7&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=S5hKwJw2tDDj9hy5CL_0gw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=46" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> LAS</div>
+        <div class="price">$50</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-05</div>
+      <div class="stats">
+        <span>Lowest <b>$50</b></span>
+        <span>Avg <b>$50</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0501LAS1?t=F917991416401799146140000075LAXLAS_7bb3ccd0ac7da431ab8ff31a100df2c1_4125&amp;search_date=09112026&amp;expected_price_uuid=01a1bfe6-b8bf-8031-2c2a-17cdcd4c7314&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=7k0QmRBvJSCknbxPSthzxg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=50" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> ATL</div>
+        <div class="price">$70</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-14</div>
+      <div class="stats">
+        <span>Lowest <b>$70</b></span>
+        <span>Avg <b>$70</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1401ATL1?t=F917999472001799974560000276LAXATL_6131414e6a5072555aacf0142d2d7352_5793&amp;search_date=10112026&amp;expected_price_uuid=01a1c5a5-8f74-8040-6df9-fe0f0fc1bbf8&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=WANUtLKRP0aTj2WYhEnnlg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=70" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> SFO</div>
+        <div class="price">$80</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-02</div>
+      <div class="stats">
+        <span>Lowest <b>$80</b></span>
+        <span>Avg <b>$80</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0201SFO1?t=F917989174801798923660000103SNASFO_4ec6137ce5f574a6813567b41fb38452_6583&amp;search_date=09112026&amp;expected_price_uuid=01a1c0f3-9abd-8040-2b03-4099841ce13c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=MGojkQ6E8DXNKsZKo1YNxQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=80" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> HOU</div>
+        <div class="price">$94</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-06</div>
+      <div class="stats">
+        <span>Lowest <b>$94</b></span>
+        <span>Avg <b>$94</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0612HOU1?t=F917965386001796558220000207LAXIAH_ab13b689ec6844762fd7fb015a901ead_7817&amp;search_date=10112026&amp;expected_price_uuid=01a1c6c1-3293-8040-a215-3beb0d748020&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=pqafhCvtgfo5iZpd6laHMw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=94" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> SJC</div>
+        <div class="price">$94</div>
+      </div>
+      <div class="meta">Alaska Airlines &nbsp;&bull;&nbsp; Departs 2027-01-02</div>
+      <div class="stats">
+        <span>Lowest <b>$94</b></span>
+        <span>Avg <b>$94</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0201SJC1?t=AS17989191601798924200000084LAXSJC_e548c247b29bd6d8e523949b8cef38e1_7793&amp;search_date=09112026&amp;expected_price_uuid=01a1c0f3-9abd-8040-2b03-4099841ce13c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=9BtvLDaug3vO1j6Czk3yag&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=94" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> SEA</div>
+        <div class="price">$98</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-02-24</div>
+      <div class="stats">
+        <span>Lowest <b>$98</b></span>
+        <span>Avg <b>$98</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2402SEA1?t=F918034488001803482040000554LAXDENSEA_12667d4a41cd312b0b11a2f44fc372fc_8086&amp;search_date=09112026&amp;expected_price_uuid=01a1c29a-78cd-8040-65e6-debf9e47c931&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=LBg5h54TMDd5JS663-XJlw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=98" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> GDL</div>
+        <div class="price">$128</div>
+      </div>
+      <div class="meta">Volaris &nbsp;&bull;&nbsp; Departs 2026-11-18</div>
+      <div class="stats">
+        <span>Lowest <b>$128</b></span>
+        <span>Avg <b>$128</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1811GDL1?t=Y417950267801795045500000192LAXGDL_8e26d20ea001470a2d4f4658c13f7511_10599&amp;search_date=13112026&amp;expected_price_uuid=01a1d28d-b394-8040-a326-893866c07f00&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=Ti7zlfK7rAuftunxYUiImg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=128" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> ORL</div>
+        <div class="price">$133</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-23</div>
+      <div class="stats">
+        <span>Lowest <b>$133</b></span>
+        <span>Avg <b>$133</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2301ORL1?t=F918007179001800775140000774LAXLASMCO_adfc817d469377780457b4598cedc9b7_10897&amp;search_date=07112026&amp;expected_price_uuid=01a1b4a2-2722-8040-a295-610e3bae57d7&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=2iBEdDackP2Vt5ijMyN93A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=133" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> FLL</div>
+        <div class="price">$134</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-15</div>
+      <div class="stats">
+        <span>Lowest <b>$134</b></span>
+        <span>Avg <b>$134</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1501FLL1?t=F918000258001800122880001438LAXIAHFLL_438037a607e9c4ac0fd33b8f5138d8f5_11004&amp;search_date=13112026&amp;expected_price_uuid=01a1d55f-cfa3-8030-2089-d6d8f431ff00&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=7s4Jx26Tu8jnKYAP_nhvzw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=134" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> MIA</div>
+        <div class="price">$135</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-15</div>
+      <div class="stats">
+        <span>Lowest <b>$135</b></span>
+        <span>Avg <b>$135</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1501MIA1?t=F918000496201800096960000609LAXATLMIA_c8b32355bf87b4a9feaaa3641778f155_11115&amp;search_date=13112026&amp;expected_price_uuid=01a1d55f-cfa3-8030-2089-d6d8f431ff00&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=DbcWRPuMGeC2rciW6YsjAQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=135" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> DTT</div>
+        <div class="price">$141</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-22</div>
+      <div class="stats">
+        <span>Lowest <b>$141</b></span>
+        <span>Avg <b>$141</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2212DTT1?t=F917979623401798017780000744LAXATLDTW_c1fa33242c6018395235c835fc8cabda_11679&amp;search_date=12112026&amp;expected_price_uuid=01a1ce4c-6886-8040-2993-dedded99ce9f&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ACjfGzfTaAgtF87HKG57Qg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=141" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> NYC</div>
+        <div class="price">$157</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2027-01-09</div>
+      <div class="stats">
+        <span>Lowest <b>$157</b></span>
+        <span>Avg <b>$157</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0901NYC1?t=F917994563401799524800000961LAXDFWLGA_92885c95b26b4e06f9d2f629dc9e0db4_12863&amp;search_date=07112026&amp;expected_price_uuid=01a1b379-73de-8030-ec2f-f52ae26b4155&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ZZZFjzk7pIcDMLCJzb07_A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=157" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> PDX</div>
+        <div class="price">$158</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-12-27</div>
+      <div class="stats">
+        <span>Lowest <b>$158</b></span>
+        <span>Avg <b>$158</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2712PDX1?t=F917983855201798407180000361LAXLASPDX_f81d1a8ee6ca882c89b76f5910fc2746_13006&amp;search_date=13112026&amp;expected_price_uuid=01a1d53e-9ab1-8040-632f-74002ea67592&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=kxVsVVKlQfuP-dVn9jqJsQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=158" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> MEX</div>
+        <div class="price">$179</div>
+      </div>
+      <div class="meta">Volaris &nbsp;&bull;&nbsp; Departs 2026-11-28</div>
+      <div class="stats">
+        <span>Lowest <b>$179</b></span>
+        <span>Avg <b>$179</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2811MEX1?t=Y417958907801795937040000651LAXGDLTLC_aecb0eaf5ac7dafbcb62b20fa67d0acf_14822&amp;search_date=13112026&amp;expected_price_uuid=01a1d31e-d248-8040-6592-41a7cf967f69&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=R7kYFWO5xOa4GMVpS1OMwg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=179" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> HNL</div>
+        <div class="price">$184</div>
+      </div>
+      <div class="meta">United Airlines &nbsp;&bull;&nbsp; Departs 2026-12-30</div>
+      <div class="stats">
+        <span>Lowest <b>$184</b></span>
+        <span>Avg <b>$184</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX3012HNL1?t=UA17986503001798664760000361LAXHNL_3c24bdc40cbee1b36be705d21d848b45_15064&amp;search_date=09112026&amp;expected_price_uuid=01a1bee8-5eeb-8040-2fac-1d1ac45c8f5c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=0ulEdAiZAHxX5VVWb5wwWg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=184" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> DFW</div>
+        <div class="price">$185</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-24</div>
+      <div class="stats">
+        <span>Lowest <b>$185</b></span>
+        <span>Avg <b>$185</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2411DFW1?t=F917955390001795566240000334LAXDENDFW_fc4759b13f073af3b57679d49a241fec_15317&amp;search_date=13112026&amp;expected_price_uuid=01a1d2c1-b4ec-8040-2653-49363ac966eb&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ClUlnkMzu0yULG4OmHUz8w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=185" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> CHI</div>
+        <div class="price">$186</div>
+      </div>
+      <div class="meta">Frontier Airlines &nbsp;&bull;&nbsp; Departs 2026-11-23</div>
+      <div class="stats">
+        <span>Lowest <b>$186</b></span>
+        <span>Avg <b>$186</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2311CHI1?t=F917954566201795508040000737LAXATLMDW_6fc61e5d3bf1cca6a7e86536da93461e_15239&amp;search_date=07112026&amp;expected_price_uuid=01a1b526-eea1-8031-6ab0-a958efd29783&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=qyTGK-RMOOzXmHV2A2GwpA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=186" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> GUA</div>
+        <div class="price">$236</div>
+      </div>
+      <div class="meta">Q6 &nbsp;&bull;&nbsp; Departs 2026-11-23</div>
+      <div class="stats">
+        <span>Lowest <b>$236</b></span>
+        <span>Avg <b>$236</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2311GUA1?t=Q617954208601795444920000281LAXGUA_2b9838d3521a85d9d708c68cbb8c7975_19470&amp;search_date=10112026&amp;expected_price_uuid=01a1c338-10a8-8040-65c9-06402210198f&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=8T4NonjxNaO5M2F0i-KG6w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=236" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> LON</div>
+        <div class="price">$255</div>
+      </div>
+      <div class="meta">AT &nbsp;&bull;&nbsp; Departs 2027-05-04</div>
+      <div class="stats">
+        <span>Lowest <b>$255</b></span>
+        <span>Avg <b>$255</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0405LON1?t=AT18094260001809532800001300LAXCMNLGW_68d7eedd5eb8c77ac7fea98d3e3f7fea_21144&amp;search_date=11112026&amp;expected_price_uuid=01a1cc0b-c496-8040-a236-e09ec6ae9006&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH1%7CR0%7CTBC0&amp;itinerary_key=fuU81hKb7bK5ZggQg8U53w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=255" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> MNL</div>
+        <div class="price">$273</div>
+      </div>
+      <div class="meta">United Airlines &nbsp;&bull;&nbsp; Departs 2027-03-25</div>
+      <div class="stats">
+        <span>Lowest <b>$273</b></span>
+        <span>Avg <b>$273</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2503MNL1?t=UA18059946001806184200002260LAXHNLGUMMNL_5aca4210309dfc1350f0c417d21ea337_22392&amp;search_date=09112026&amp;expected_price_uuid=01a1beb4-f5d7-8040-a361-c850fdd8f980&amp;static_fare_key=TY%7CP0%7CH0%7CL1_1_0%7CCH0%7CR0%7CTBC1&amp;itinerary_key=EpsACufFezKuLXSoTFA-WA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=273" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> TYO</div>
+        <div class="price">$301</div>
+      </div>
+      <div class="meta">YP &nbsp;&bull;&nbsp; Departs 2027-02-26</div>
+      <div class="stats">
+        <span>Lowest <b>$301</b></span>
+        <span>Avg <b>$301</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2602TYO1?t=YP18036354001803813600001950LAXICNNRT_5c21fe80f50ce4088ff15fd44766a7c1_24910&amp;search_date=12112026&amp;expected_price_uuid=01a1d060-2f8a-8040-2e49-5354b69ebaba&amp;static_fare_key=TY%7CP1%7CH0%7CL1_1_20%7CCH0%7CR0%7CTBC1&amp;itinerary_key=lDeZ75CsDUtbnfXyoaqS-g&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=301" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> SAL</div>
+        <div class="price">$338</div>
+      </div>
+      <div class="meta">Copa Airlines &nbsp;&bull;&nbsp; Departs 2026-12-20</div>
+      <div class="stats">
+        <span>Lowest <b>$338</b></span>
+        <span>Avg <b>$338</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2012SAL1?t=CM17978041801797856860000758LAXPTYSAL_c66f758f018d9951663095224dcd3f23_27956&amp;search_date=13112026&amp;expected_price_uuid=01a1d347-4161-8040-23d3-3366873ae581&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=znaNPai9lM_NNVxMpk_CSg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=338" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> IST</div>
+        <div class="price">$350</div>
+      </div>
+      <div class="meta">Lufthansa &nbsp;&bull;&nbsp; Departs 2027-10-27</div>
+      <div class="stats">
+        <span>Lowest <b>$350</b></span>
+        <span>Avg <b>$350</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2710IST1?t=LH18246582001824775500001355LAXMUCIST_b7134d1d84e76acf2d4880bd3707da3c_28696&amp;search_date=07112026&amp;expected_price_uuid=01a1b7df-5512-8030-6222-39932f0c8c74&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=-seyH2VlL_043i1qBIF3pQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=350" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> SGN</div>
+        <div class="price">$374</div>
+      </div>
+      <div class="meta">PR &nbsp;&bull;&nbsp; Departs 2027-02-11</div>
+      <div class="stats">
+        <span>Lowest <b>$374</b></span>
+        <span>Avg <b>$374</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1102SGN1?t=PR18023835001802508600001185LAXMNLSGN_6ac02c1167c408c097bdc8dca2cc178f_30932&amp;search_date=11112026&amp;expected_price_uuid=01a1cb98-cd5a-8040-230c-7452266976e6&amp;static_fare_key=TY%7CP1%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&amp;itinerary_key=HG-bJR8VrxjfTE5Rq6iP3A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=374" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> BKK</div>
+        <div class="price">$379</div>
+      </div>
+      <div class="meta">Korean Air &nbsp;&bull;&nbsp; Departs 2027-02-10</div>
+      <div class="stats">
+        <span>Lowest <b>$379</b></span>
+        <span>Avg <b>$379</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1002BKK1?t=KE18022572001802467800002610LAXICNBKK_9c962adb87d0ca99455702114793478a_31268&amp;search_date=09112026&amp;expected_price_uuid=01a1c10e-86ce-8040-2146-40d8cfa514e3&amp;static_fare_key=TY%7CP1_JW%7CH1%7CL1_1_23%7CCH0%7CR0%7CTBC1&amp;itinerary_key=OVTzb_2cA6DrTVu-BD3erg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=379" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> EVN</div>
+        <div class="price">$400</div>
+      </div>
+      <div class="meta">TAP Air Portugal &nbsp;&bull;&nbsp; Departs 2027-02-11</div>
+      <div class="stats">
+        <span>Lowest <b>$400</b></span>
+        <span>Avg <b>$400</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1102EVN1?t=TP18023658001802543100002235LAXLISFCOCIAOTPEVN_d3ab240feb95f8f9c89efc7f9fa30a00_33121&amp;search_date=12112026&amp;expected_price_uuid=01a1d1db-f753-8040-67a1-25616797ed53&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=F-q6MFDyheqBvUEc2TwcUg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=400" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> MOW</div>
+        <div class="price">$519</div>
+      </div>
+      <div class="meta">Lufthansa &nbsp;&bull;&nbsp; Departs 2027-02-15</div>
+      <div class="stats">
+        <span>Lowest <b>$519</b></span>
+        <span>Avg <b>$520</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1502MOW1?t=UA18027036001802821800001310LAXFRAISTSVO_ec8e374cf65918a9bf4bf7cf483b029b_42893&amp;search_date=13112026&amp;expected_price_uuid=01a1d5d2-d79b-8031-23fb-956433c01353&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=2ecaU1eF3HQBxyrGRSKZNQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=519" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
+    <div class="card small">
+      <div class="card-head">
+        <div class="route">Los Angeles <span class="arrow">&rarr;</span> ALA</div>
+        <div class="price">$547</div>
+      </div>
+      <div class="meta">TAP Air Portugal &nbsp;&bull;&nbsp; Departs 2026-12-29</div>
+      <div class="stats">
+        <span>Lowest <b>$547</b></span>
+        <span>Avg <b>$547</b></span>
+      </div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2912ALA1?t=TP17985642001798778400002790LAXLISFCOSAWALA_1c9f3583a2df127482256a0209504f49_45294&amp;search_date=13112026&amp;expected_price_uuid=01a1d346-31ae-8040-6a42-25d685f3e6dd&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6RXTKkiWY1dh6Usm47MCGQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=547" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+    </div>
+    
   </div>
 
   <h2>Recent alerts</h2>
   <div class="panel">
   <table>
-    <thead><tr><th>When</th><th>Alert</th><th>Price</th><th>Reason</th></tr></thead>
+    <thead><tr><th>When</th><th>Alert</th><th>Price</th><th>Reason</th><th>Link</th></tr></thead>
     <tbody>
-      <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ORL</td><td>$133</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DEN</td><td>$29</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MIA</td><td>$135</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DTT</td><td>$141</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MEX</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PDX</td><td>$158</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ATL</td><td>$70</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SJC</td><td>$94</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PHX</td><td>$46</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-HOU</td><td>$94</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-FLL</td><td>$134</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SEA</td><td>$98</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-GDL</td><td>$128</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SFO</td><td>$80</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-NYC</td><td>$157</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-LAS</td><td>$50</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PDX</td><td>$180</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-DTT</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SRQ</td><td>$145</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SAV</td><td>$119</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-CLT</td><td>$124</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PHL</td><td>$165</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-ONT</td><td>$155</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-WAS</td><td>$179</td><td>at/under your $180 anywhere target</td></tr>
-<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-LAS</td><td>$105</td><td>at/under your $180 anywhere target</td></tr>
+      <tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ORL</td><td>$133</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DEN</td><td>$29</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MIA</td><td>$135</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-DTT</td><td>$141</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-MEX</td><td>$179</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PDX</td><td>$158</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-ATL</td><td>$70</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SJC</td><td>$94</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-PHX</td><td>$46</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-HOU</td><td>$94</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-FLL</td><td>$134</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SEA</td><td>$98</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-GDL</td><td>$128</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-SFO</td><td>$80</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-NYC</td><td>$157</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>LAX-LAS</td><td>$50</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PDX</td><td>$180</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-DTT</td><td>$179</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SRQ</td><td>$145</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-SAV</td><td>$119</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-CLT</td><td>$124</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-PHL</td><td>$165</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-ONT</td><td>$155</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-WAS</td><td>$179</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
+<tr><td>Nov 13, 2026 16:42 UTC</td><td>BNA-LAS</td><td>$105</td><td>at/under your $180 anywhere target</td><td><span class="muted">-</span></td></tr>
     </tbody>
   </table>
   </div>
 </main>
+<footer>Prices are cached search data, not live quotes - always confirm on the airline/OTA page before buying.</footer>
 </body>
 </html>
