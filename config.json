@@ -1,0 +1,35 @@
+{
+  "airports": {
+    "BNA": { "label": "Nashville" },
+    "LAX": { "label": "Los Angeles" },
+    "BUR": { "label": "Burbank" },
+    "SNA": { "label": "Orange County" }
+  },
+  "routes": [
+    {
+      "origin": "BNA",
+      "destination": "LAX",
+      "threshold_price": 150,
+      "currency": "USD",
+      "notes": "Nashville to LA"
+    },
+    {
+      "origin": "LAX",
+      "destination": "BNA",
+      "threshold_price": 150,
+      "currency": "USD",
+      "notes": "LA to Nashville"
+    }
+  ],
+  "anywhere_scan": {
+    "origins": ["BNA", "LAX"],
+    "max_price": 180,
+    "currency": "USD",
+    "notes": "Flags any destination from these airports that comes in at or under max_price, or that drops well below its own historical average (mistake-fare style deals, like Going.com)."
+  },
+  "deal_rules": {
+    "drop_below_historical_avg_pct": 20,
+    "drop_below_historical_min_pct": 10,
+    "realert_cooldown_hours": 24
+  }
+}
