@@ -97,7 +97,7 @@ def route_card(cfg, origin, dest, series, threshold) -> str:
         chart_data = json.dumps([s["price"] for s in samples])
         chart_labels = json.dumps([s["ts"][:10] for s in samples])
         chart_html = f"""
-      <canvas id="{canvas_id}" height="54"></canvas>
+      <div class="chart-wrap"><canvas id="{canvas_id}"></canvas></div>
       <script>
         new Chart(document.getElementById("{canvas_id}"), {{
           type: "line",
@@ -293,6 +293,8 @@ def main() -> None:
   .stats {{ display:flex; gap:var(--sp-5); font-size:.82rem; color:var(--muted); }}
   .stats b {{ color:var(--ink-2); font-variant-numeric: tabular-nums; }}
   .chart-placeholder {{ font-size:.78rem; color:var(--muted); padding:var(--sp-3) 0; }}
+  .chart-wrap {{ position:relative; height:54px; width:100%; flex:none; }}
+  .chart-wrap canvas {{ position:absolute; inset:0; width:100% !important; height:100% !important; }}
   .card-foot {{ margin-top:auto; padding-top:var(--sp-1); }}
   .book-btn {{ display:inline-block; text-decoration:none; font-size:.82rem; font-weight:700; color:#06130c;
                background:linear-gradient(135deg,#1baf7a,#3987e5); padding:9px 15px; border-radius:var(--radius-sm); }}
