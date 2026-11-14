@@ -102,11 +102,11 @@
   <div class="header-row">
     <div>
       <h1>&#9992;&#65039; Flight Price Tracker</h1>
-      <div class="sub">Last checked: Nov 14, 2026 01:06 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
+      <div class="sub">Last checked: Nov 14, 2026 07:05 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
     </div>
     <nav><button type="button" class="manage-toggle" id="btn-toggle-manage" onclick="ftToggleManage()">&#9881;&#65039; Manage</button></nav>
   </div>
-  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$288</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$46</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">39</div></div></div>
+  <div class="stat-row"><div class="stat-tile"><div class="stat-label">Cheapest tracked route</div><div class="stat-value">$251</div></div><div class="stat-tile"><div class="stat-label">Cheapest anywhere fare</div><div class="stat-value">$46</div></div><div class="stat-tile"><div class="stat-label">Deals alerted so far</div><div class="stat-value">39</div></div></div>
 </header>
 
 
@@ -659,10 +659,10 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="card">
       <div class="card-head">
         <div class="route">Nashville <span class="arrow">&rarr;</span> Los Angeles</div>
-        <div class="price">$288</div>
+        <div class="price">$251</div>
       </div>
-      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#c98500"></span>JetBlue &middot; #2582</span></div>
-      <div class="dates">Departs 2027-02-02 &middot; returns 2027-02-08</div>
+      <div class="card-tags"><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #3051</span></div>
+      <div class="dates">Departs 2026-11-15 &middot; returns 2026-11-17</div>
       <div class="stats">
         <span>Lowest seen <b>$248</b></span>
         <span>Average <b>$255</b></span>
@@ -672,11 +672,11 @@ window.addEventListener("DOMContentLoaded", () => {
       <script>
         new Chart(document.getElementById("chart-BNA-LAX"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 288.0, 288.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14", "2026-11-14"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 288.0, 288.0, 251.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
-      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0202LAX08021?t=B618015783001801608540000624BNAFLLLAX18020664001802096220000377LAXDENBNA_569afd1b4f78cf8c3bf3d6ac2132a1cf_23927&amp;search_date=11112026&amp;expected_price_uuid=01a1cc9b-8a3a-8040-2d63-901a2ff5a6d6&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=o8pklTFAkFdQqbJKF2R1HA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=288" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+      <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA1511LAX17111?t=F917947666801794784680000420BNADFWLAX17948961001794924960000361LAXDENBNA_037bc1ae74dd7bcab68cb4e4c5c518f3_20818&amp;search_date=14112026&amp;expected_price_uuid=01a1d84a-ee1c-8040-a588-c26109bec656&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=Sp2PWsjTGDYobKfLtR_ESw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=251" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
     </div>
     
     <div class="card">
@@ -695,7 +695,7 @@ window.addEventListener("DOMContentLoaded", () => {
       <script>
         new Chart(document.getElementById("chart-LAX-BNA"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0, 346.0, 346.0, 346.0, 346.0, 346.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14", "2026-11-14"], datasets: [{ data: [350.0, 350.0, 350.0, 350.0, 350.0, 350.0, 346.0, 346.0, 346.0, 346.0, 346.0, 346.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
@@ -710,7 +710,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     <div class="filter-bar">
       <input type="text" id="ft-dest-search" placeholder="Search destination (e.g. MIA, Miami)" oninput="ftApplyFilters()">
-      <div class="pill-row"><button type="button" class="airline-pill" data-airline="AT" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>AT</button><button type="button" class="airline-pill" data-airline="Air Canada" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Air Canada</button><button type="button" class="airline-pill" data-airline="Alaska Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Alaska Airlines</button><button type="button" class="airline-pill" data-airline="Allegiant Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Allegiant Air</button><button type="button" class="airline-pill" data-airline="American Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>American Airlines</button><button type="button" class="airline-pill" data-airline="Austrian Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>Austrian Airlines</button><button type="button" class="airline-pill" data-airline="Frontier Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Frontier Airlines</button><button type="button" class="airline-pill" data-airline="JetBlue" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#c98500"></span>JetBlue</button><button type="button" class="airline-pill" data-airline="Korean Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Korean Air</button><button type="button" class="airline-pill" data-airline="LF" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>LF</button><button type="button" class="airline-pill" data-airline="Lufthansa" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>Lufthansa</button><button type="button" class="airline-pill" data-airline="PR" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>PR</button><button type="button" class="airline-pill" data-airline="Q6" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>Q6</button><button type="button" class="airline-pill" data-airline="Southwest Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Southwest Airlines</button><button type="button" class="airline-pill" data-airline="TAP Air Portugal" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>TAP Air Portugal</button><button type="button" class="airline-pill" data-airline="Turkish Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>Turkish Airlines</button><button type="button" class="airline-pill" data-airline="United Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>United Airlines</button><button type="button" class="airline-pill" data-airline="Volaris" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Volaris</button><button type="button" class="airline-pill" data-airline="YP" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>YP</button></div>
+      <div class="pill-row"><button type="button" class="airline-pill" data-airline="AT" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>AT</button><button type="button" class="airline-pill" data-airline="Air Canada" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Air Canada</button><button type="button" class="airline-pill" data-airline="Alaska Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Alaska Airlines</button><button type="button" class="airline-pill" data-airline="Allegiant Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Allegiant Air</button><button type="button" class="airline-pill" data-airline="American Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>American Airlines</button><button type="button" class="airline-pill" data-airline="Copa Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>Copa Airlines</button><button type="button" class="airline-pill" data-airline="Frontier Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Frontier Airlines</button><button type="button" class="airline-pill" data-airline="JetBlue" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#c98500"></span>JetBlue</button><button type="button" class="airline-pill" data-airline="Korean Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Korean Air</button><button type="button" class="airline-pill" data-airline="LF" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>LF</button><button type="button" class="airline-pill" data-airline="Lufthansa" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>Lufthansa</button><button type="button" class="airline-pill" data-airline="PR" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>PR</button><button type="button" class="airline-pill" data-airline="Q6" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>Q6</button><button type="button" class="airline-pill" data-airline="Southwest Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Southwest Airlines</button><button type="button" class="airline-pill" data-airline="TAP Air Portugal" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>TAP Air Portugal</button><button type="button" class="airline-pill" data-airline="Turkish Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>Turkish Airlines</button><button type="button" class="airline-pill" data-airline="United Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>United Airlines</button><button type="button" class="airline-pill" data-airline="Volaris" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Volaris</button><button type="button" class="airline-pill" data-airline="YP" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>YP</button></div>
       <button type="button" class="filter-clear" onclick="ftClearFilters()">Clear filters</button>
     </div>
     
@@ -727,7 +727,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2027-02-02</div>
           <div class="stats">
             <span>Lowest <b>$104</b></span>
-            <span>Avg <b>$154</b></span>
+            <span>Avg <b>$150</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0202PHL1?t=F918015723001801599000000385BNAMCOPHL_a731c1e705327eec3a33cfddde04e2e2_8601&amp;search_date=13112026&amp;expected_price_uuid=01a1d61c-0258-8040-2800-02c2c513ea57&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4Wg6DY5bPOcZIaJLRMHsjA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=104" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -811,7 +811,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2026-12-03</div>
           <div class="stats">
             <span>Lowest <b>$103</b></span>
-            <span>Avg <b>$105</b></span>
+            <span>Avg <b>$106</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0312SJU1?t=B617963213401796349540000350BNAFLLSJU_9eed34876f48197105655fb25f59b5f6_9954&amp;search_date=13112026&amp;expected_price_uuid=01a1d739-e2ba-8030-6506-a9324ab380a6&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=krMt10-o-lK4EGLgDZo9pA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=120" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -825,12 +825,12 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2026-12-01</div>
           <div class="stats">
             <span>Lowest <b>$97</b></span>
-            <span>Avg <b>$102</b></span>
+            <span>Avg <b>$104</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112DEN1?t=F917961364201796160600000463BNAMCODEN_e5e9e445901691c927f8b19f6f16d1cd_10173&amp;search_date=13112026&amp;expected_price_uuid=01a1d617-53f3-8040-a72b-a79809a6386b&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=tfvmBrsMz3Auhtdk6o9qng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=123" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         </div>
-      <div class="more-note">+22 more scanned from Nashville - <a href="#" onclick="ftOpenManage('dest-input'); return false;">narrow this down to specific destinations</a> to see them all.</div>
+      <div class="more-note">+23 more scanned from Nashville - <a href="#" onclick="ftOpenManage('dest-input'); return false;">narrow this down to specific destinations</a> to see them all.</div>
     </div>
     
     <div class="origin-group">
@@ -892,6 +892,20 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0201SFO1?t=F917989174801798923660000103SNASFO_4ec6137ce5f574a6813567b41fb38452_6583&amp;search_date=09112026&amp;expected_price_uuid=01a1c0f3-9abd-8040-2b03-4099841ce13c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=MGojkQ6E8DXNKsZKo1YNxQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=80" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
+        <div class="card small" data-origin="LAX" data-dest="CHI" data-airline="Frontier Airlines">
+          <div class="card-head">
+            <div class="route">Los Angeles <span class="arrow">&rarr;</span> CHI</div>
+            <div class="price">$93</div>
+          </div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2342</span></div>
+          <div class="dates">Departs 2026-12-15</div>
+          <div class="stats">
+            <span>Lowest <b>$93</b></span>
+            <span>Avg <b>$142</b></span>
+          </div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1512CHI1?t=F917973513601797382440000398LAXDENORD_c8d84914ecf4e5bc0f8dcfd7fd72c370_7697&amp;search_date=12112026&amp;expected_price_uuid=01a1d058-c6a3-8040-a545-6ed2310e1876&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=x7-SufSY3qZwFG3PJBa33w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=93" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+        </div>
+        
         <div class="card small" data-origin="LAX" data-dest="HOU" data-airline="Frontier Airlines">
           <div class="card-head">
             <div class="route">Los Angeles <span class="arrow">&rarr;</span> HOU</div>
@@ -932,20 +946,6 @@ window.addEventListener("DOMContentLoaded", () => {
             <span>Avg <b>$98</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX2402SEA1?t=F918034488001803482040000554LAXDENSEA_12667d4a41cd312b0b11a2f44fc372fc_8086&amp;search_date=09112026&amp;expected_price_uuid=01a1c29a-78cd-8040-65e6-debf9e47c931&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=LBg5h54TMDd5JS663-XJlw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=98" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
-        </div>
-        
-        <div class="card small" data-origin="LAX" data-dest="CHI" data-airline="Frontier Airlines">
-          <div class="card-head">
-            <div class="route">Los Angeles <span class="arrow">&rarr;</span> CHI</div>
-            <div class="price">$102</div>
-          </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2264</span></div>
-          <div class="dates">Departs 2026-12-02</div>
-          <div class="stats">
-            <span>Lowest <b>$97</b></span>
-            <span>Avg <b>$147</b></span>
-          </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0212CHI1?t=G417962404601796299020000856LAXLASRFD_279593a2e8179504904171dcbbca598b_8442&amp;search_date=12112026&amp;expected_price_uuid=01a1d058-c6ad-8040-6e29-1ac4deb114d3&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=E4S2_BEfuOMtOJNUI0QLvA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=102" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         </div>
       <div class="more-note">+22 more scanned from Los Angeles - <a href="#" onclick="ftOpenManage('dest-input'); return false;">narrow this down to specific destinations</a> to see them all.</div>
