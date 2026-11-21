@@ -102,7 +102,7 @@
   <div class="header-row">
     <div>
       <h1>&#9992;&#65039; Flight Price Tracker</h1>
-      <div class="sub">Last checked: Nov 21, 2026 07:15 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
+      <div class="sub">Last checked: Nov 21, 2026 13:01 UTC &middot; fares from Travelpayouts/Aviasales, verify before booking</div>
     </div>
     <nav><button type="button" class="manage-toggle" id="btn-toggle-manage" onclick="ftToggleManage()">&#9881;&#65039; Manage</button></nav>
   </div>
@@ -665,14 +665,14 @@ window.addEventListener("DOMContentLoaded", () => {
       <div class="dates">Departs 2026-12-15 &middot; returns 2026-12-21</div>
       <div class="stats">
         <span>Lowest seen <b>$228</b></span>
-        <span>Average <b>$273</b></span>
+        <span>Average <b>$272</b></span>
       </div>
       
       <div class="chart-wrap"><canvas id="chart-BNA-LAX"></canvas></div>
       <script>
         new Chart(document.getElementById("chart-BNA-LAX"), {
           type: "line",
-          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14", "2026-11-14", "2026-11-14", "2026-11-14", "2026-11-15", "2026-11-15", "2026-11-15", "2026-11-15", "2026-11-16", "2026-11-16", "2026-11-16", "2026-11-16", "2026-11-17", "2026-11-17", "2026-11-17", "2026-11-17", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-19", "2026-11-19", "2026-11-19", "2026-11-19", "2026-11-20", "2026-11-20", "2026-11-20", "2026-11-20", "2026-11-21", "2026-11-21"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 288.0, 288.0, 251.0, 251.0, 251.0, 251.0, 251.0, 251.0, 251.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 319.0, 319.0, 319.0, 319.0, 319.0, 319.0, 319.0, 228.0, 228.0, 228.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
+          data: { labels: ["2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-13", "2026-11-14", "2026-11-14", "2026-11-14", "2026-11-14", "2026-11-15", "2026-11-15", "2026-11-15", "2026-11-15", "2026-11-16", "2026-11-16", "2026-11-16", "2026-11-16", "2026-11-17", "2026-11-17", "2026-11-17", "2026-11-17", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-18", "2026-11-19", "2026-11-19", "2026-11-19", "2026-11-19", "2026-11-20", "2026-11-20", "2026-11-20", "2026-11-20", "2026-11-21", "2026-11-21", "2026-11-21"], datasets: [{ data: [248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 248.0, 288.0, 288.0, 251.0, 251.0, 251.0, 251.0, 251.0, 251.0, 251.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 288.0, 319.0, 319.0, 319.0, 319.0, 319.0, 319.0, 319.0, 228.0, 228.0, 228.0, 228.0], borderColor: "#3987e5", backgroundColor: "rgba(57,135,229,0.15)", fill: true, tension: 0.3, pointRadius: 0, borderWidth: 2 }] },
           options: { plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { display: false } }, responsive: true, maintainAspectRatio: false }
         });
       </script>
@@ -710,7 +710,7 @@ window.addEventListener("DOMContentLoaded", () => {
     
     <div class="filter-bar">
       <input type="text" id="ft-dest-search" placeholder="Search destination (e.g. MIA, Miami)" oninput="ftApplyFilters()">
-      <div class="pill-row"><button type="button" class="airline-pill" data-airline="9X" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>9X</button><button type="button" class="airline-pill" data-airline="Aer Lingus" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>Aer Lingus</button><button type="button" class="airline-pill" data-airline="Aeromexico" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Aeromexico</button><button type="button" class="airline-pill" data-airline="Air Canada" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Air Canada</button><button type="button" class="airline-pill" data-airline="Alaska Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Alaska Airlines</button><button type="button" class="airline-pill" data-airline="Allegiant Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Allegiant Air</button><button type="button" class="airline-pill" data-airline="American Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>American Airlines</button><button type="button" class="airline-pill" data-airline="FI" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>FI</button><button type="button" class="airline-pill" data-airline="Frontier Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Frontier Airlines</button><button type="button" class="airline-pill" data-airline="JetBlue" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#c98500"></span>JetBlue</button><button type="button" class="airline-pill" data-airline="LF" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>LF</button><button type="button" class="airline-pill" data-airline="Lufthansa" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>Lufthansa</button><button type="button" class="airline-pill" data-airline="PD" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>PD</button><button type="button" class="airline-pill" data-airline="Southwest Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Southwest Airlines</button><button type="button" class="airline-pill" data-airline="Sun Country Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>Sun Country Airlines</button><button type="button" class="airline-pill" data-airline="TAP Air Portugal" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>TAP Air Portugal</button><button type="button" class="airline-pill" data-airline="United Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>United Airlines</button><button type="button" class="airline-pill" data-airline="Volaris" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Volaris</button><button type="button" class="airline-pill" data-airline="WestJet" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>WestJet</button><button type="button" class="airline-pill" data-airline="YP" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>YP</button><button type="button" class="airline-pill" data-airline="ZG" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>ZG</button></div>
+      <div class="pill-row"><button type="button" class="airline-pill" data-airline="9X" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>9X</button><button type="button" class="airline-pill" data-airline="Aer Lingus" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>Aer Lingus</button><button type="button" class="airline-pill" data-airline="Aeromexico" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Aeromexico</button><button type="button" class="airline-pill" data-airline="Air Canada" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Air Canada</button><button type="button" class="airline-pill" data-airline="Alaska Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>Alaska Airlines</button><button type="button" class="airline-pill" data-airline="Allegiant Air" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Allegiant Air</button><button type="button" class="airline-pill" data-airline="American Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>American Airlines</button><button type="button" class="airline-pill" data-airline="FI" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>FI</button><button type="button" class="airline-pill" data-airline="Frontier Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Frontier Airlines</button><button type="button" class="airline-pill" data-airline="JetBlue" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#c98500"></span>JetBlue</button><button type="button" class="airline-pill" data-airline="LF" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#199e70"></span>LF</button><button type="button" class="airline-pill" data-airline="Lufthansa" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>Lufthansa</button><button type="button" class="airline-pill" data-airline="PD" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d55181"></span>PD</button><button type="button" class="airline-pill" data-airline="Southwest Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#008300"></span>Southwest Airlines</button><button type="button" class="airline-pill" data-airline="Sun Country Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>Sun Country Airlines</button><button type="button" class="airline-pill" data-airline="TAP Air Portugal" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#e66767"></span>TAP Air Portugal</button><button type="button" class="airline-pill" data-airline="United Airlines" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>United Airlines</button><button type="button" class="airline-pill" data-airline="Volaris" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#3987e5"></span>Volaris</button><button type="button" class="airline-pill" data-airline="WestJet" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#9085e9"></span>WestJet</button><button type="button" class="airline-pill" data-airline="YP" onclick="this.classList.toggle('active'); ftApplyFilters();"><span class="dot" style="background:#d95926"></span>YP</button></div>
       <button type="button" class="filter-clear" onclick="ftClearFilters()">Clear filters</button>
     </div>
     
@@ -727,7 +727,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2026-11-24</div>
           <div class="stats">
             <span>Lowest <b>$67</b></span>
-            <span>Avg <b>$99</b></span>
+            <span>Avg <b>$98</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA2411FLL1?t=G417955097801795521120000129BNAFLL_6e27a154eef36c22b5b0a3668ef97948_5550&amp;search_date=16112026&amp;expected_price_uuid=01a1e231-1a6c-8040-265a-75a4b1015491&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=XOdIvwsCkReqE9Abb09YjA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=67" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -741,9 +741,23 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2026-12-07</div>
           <div class="stats">
             <span>Lowest <b>$77</b></span>
-            <span>Avg <b>$106</b></span>
+            <span>Avg <b>$105</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0712MIA1?t=WN17966619001796674200000145BNAMIA_2b9ac4d15f90ca2bfa642b8b8f4f24cc_6361&amp;search_date=16112026&amp;expected_price_uuid=01a1e5c6-f1f4-8040-2eb8-71dc115eec98&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=xnlswEXirCVJc1nmnvr6Eg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=77" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+        </div>
+        
+        <div class="card small" data-origin="BNA" data-dest="ATL" data-airline="Frontier Airlines">
+          <div class="card-head">
+            <div class="route">Nashville <span class="arrow">&rarr;</span> ATL</div>
+            <div class="price">$83</div>
+          </div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2586</span></div>
+          <div class="dates">Departs 2026-12-01</div>
+          <div class="stats">
+            <span>Lowest <b>$83</b></span>
+            <span>Avg <b>$97</b></span>
+          </div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112ATL1?t=F917961364201796202780001046BNAMCOATL_d9765d400df06238ba9da37ad9c60107_6813&amp;search_date=21112026&amp;expected_price_uuid=01a1fde1-3bb9-8031-2e9a-830208aa69cf&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=komObZPOBce0Psye7JssWg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=83" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
         <div class="card small" data-origin="BNA" data-dest="CHI" data-airline="Frontier Airlines">
@@ -758,6 +772,20 @@ window.addEventListener("DOMContentLoaded", () => {
             <span>Avg <b>$106</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112CHI1?t=F917961364201796173140000612BNAMCOORD_bbc6f33b06b5d13a23951e266cb06fef_6813&amp;search_date=21112026&amp;expected_price_uuid=01a1fcc3-059a-8030-e959-30673ac804ee&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=y-C8RTXvsoJXCNKdydRfGQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=83" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+        </div>
+        
+        <div class="card small" data-origin="BNA" data-dest="DFW" data-airline="Frontier Airlines">
+          <div class="card-head">
+            <div class="route">Nashville <span class="arrow">&rarr;</span> DFW</div>
+            <div class="price">$83</div>
+          </div>
+          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#3987e5"></span>Frontier Airlines &middot; #2586</span></div>
+          <div class="dates">Departs 2026-12-01</div>
+          <div class="stats">
+            <span>Lowest <b>$83</b></span>
+            <span>Avg <b>$125</b></span>
+          </div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0112DFW1?t=F917961364201796170200000563BNAMCODFW_3cb1dcf61ff7706fd13a4c5846d53d0c_6813&amp;search_date=21112026&amp;expected_price_uuid=01a1fe1f-2897-8030-6fc1-14df739cdb3e&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=_BYEWpSLGIjtI9XDWKlAhQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=83" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
         <div class="card small" data-origin="BNA" data-dest="CHS" data-airline="Southwest Airlines">
@@ -801,34 +829,6 @@ window.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0312SJU1?t=AA17962965601796337300000559BNAMIASJU_fa01f1ed6b18c2aa12a12d2126c9e212_8939&amp;search_date=19112026&amp;expected_price_uuid=01a1f617-2c89-8040-a079-c1adb7ddd16c&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6OSCGQ2oGsUV3HbdZiaMkg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=109" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
-        
-        <div class="card small" data-origin="BNA" data-dest="ATL" data-airline="JetBlue">
-          <div class="card-head">
-            <div class="route">Nashville <span class="arrow">&rarr;</span> ATL</div>
-            <div class="price">$110</div>
-          </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#c98500"></span>JetBlue &middot; #2482</span></div>
-          <div class="dates">Departs 2027-01-07</div>
-          <div class="stats">
-            <span>Lowest <b>$87</b></span>
-            <span>Avg <b>$98</b></span>
-          </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0701ATL1?t=B617993064001799341080000518BNAFLLMIAATL_e8921214c02937d02da0a040f4228860_9059&amp;search_date=20112026&amp;expected_price_uuid=01a1f77f-e0b6-8031-262f-8a53288930a2&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=TcLTUypvOlqf-yrFpX84AA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=110" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
-        </div>
-        
-        <div class="card small" data-origin="BNA" data-dest="TPA" data-airline="Allegiant Air">
-          <div class="card-head">
-            <div class="route">Nashville <span class="arrow">&rarr;</span> TPA</div>
-            <div class="price">$117</div>
-          </div>
-          <div class="card-tags"><span class="badge good">&#128293; At/under $150 target</span><span class="airline-chip"><span class="dot" style="background:#008300"></span>Allegiant Air &middot; #1973</span></div>
-          <div class="dates">Departs 2026-12-06</div>
-          <div class="stats">
-            <span>Lowest <b>$104</b></span>
-            <span>Avg <b>$112</b></span>
-          </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/BNA0612TPA1?t=G417965671001796627400000945BNAFLLTPA_1ef2e8983e3213acc66ec3b61254d49c_9664&amp;search_date=16112026&amp;expected_price_uuid=01a1e52c-5417-8040-a32a-cfbf042d18e0&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=nBLzZIv_HN5j1ApxZNPJXA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=117" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
-        </div>
         </div>
       <div class="more-note">+36 more scanned from Nashville - <a href="#" onclick="ftOpenManage('dest-input'); return false;">narrow this down to specific destinations</a> to see them all.</div>
     </div>
@@ -845,7 +845,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2027-01-13</div>
           <div class="stats">
             <span>Lowest <b>$32</b></span>
-            <span>Avg <b>$43</b></span>
+            <span>Avg <b>$42</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1301LAS1?t=F917998381201799842680000076LAXLAS_454301f5f53b09d9fee5a4d0fcda1838_3065&amp;search_date=15112026&amp;expected_price_uuid=01a1df81-3922-8040-2235-d8381b735886&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=O0LD7HZ2LBT3WvLl2vwktQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=37" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -861,7 +861,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <span>Lowest <b>$38</b></span>
             <span>Avg <b>$77</b></span>
           </div>
-          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1301SFO1?t=F917998529401799858460000092LAXSFO_12475455286f69fb47efa6b6a81078e8_3610&amp;search_date=20112026&amp;expected_price_uuid=01a1f819-0f28-8030-eb00-421bf5acbadc&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=uTEYOhDtynsiSDd3nzxgcA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=44" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
+          <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1301SFO1?t=F917998529401799858460000092LAXSFO_12475455286f69fb47efa6b6a81078e8_3612&amp;search_date=21112026&amp;expected_price_uuid=01a1fdad-f49a-8031-688f-c9611a60206a&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=uTEYOhDtynsiSDd3nzxgcA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=44" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
         
         <div class="card small" data-origin="LAX" data-dest="DEN" data-airline="Frontier Airlines">
@@ -901,7 +901,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2026-12-10</div>
           <div class="stats">
             <span>Lowest <b>$79</b></span>
-            <span>Avg <b>$102</b></span>
+            <span>Avg <b>$101</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX1012SEA1?t=F917969221801796933040000181LAXSEA_6787dfa69d954cf7dacade9cfeec4cb3_6492&amp;search_date=18112026&amp;expected_price_uuid=01a1ed71-ed39-8040-a362-5c1e5d72f67a&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=BNPUgmVofYHi8IIjYNtt1A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=79" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -929,7 +929,7 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="dates">Departs 2027-01-06</div>
           <div class="stats">
             <span>Lowest <b>$91</b></span>
-            <span>Avg <b>$109</b></span>
+            <span>Avg <b>$108</b></span>
           </div>
           <div class="card-foot"><a class="book-btn" href="https://www.aviasales.com/search/LAX0601CHI1?t=G417992375801799322720001299LAXLASRFD_6e56ad18dc2b3040d36711e7a228a536_8299&amp;search_date=20112026&amp;expected_price_uuid=01a1f64a-1926-8040-6a61-19026e8bf423&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=3Q4CFBsSXbtG4nWPwnvI3A&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=101" target="_blank" rel="noopener noreferrer">Book / view fare &rarr;</a></div>
         </div>
@@ -960,7 +960,13 @@ window.addEventListener("DOMContentLoaded", () => {
     <table>
       <thead><tr><th>When</th><th>Alert</th><th>Price</th><th>Reason</th><th>Link</th></tr></thead>
       <tbody>
-        <tr><td>Nov 21, 2026 07:15 UTC</td><td>LAX-DEN</td><td class='num'>$63</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX1012DEN1?t=F917969031001796915640000149LAXDEN_cdf31dc06d92b807e980ccf7bd97a5b4_5219&amp;search_date=14112026&amp;expected_price_uuid=01a1da07-b773-8040-ad8e-448366b0b342&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=BlkD-3FjgjyTSUc20luQng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=63" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+        <tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-MIA</td><td class='num'>$77</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0712MIA1?t=WN17966619001796674200000145BNAMIA_2b9ac4d15f90ca2bfa642b8b8f4f24cc_6361&amp;search_date=16112026&amp;expected_price_uuid=01a1e5c6-f1f4-8040-2eb8-71dc115eec98&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=xnlswEXirCVJc1nmnvr6Eg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=77" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-LAX</td><td class='num'>$132</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA1902LAX1?t=F918030492601803121080001317BNADENLAX_9336ef7eae15aace90b9e38cfdb7e0cc_10877&amp;search_date=19112026&amp;expected_price_uuid=01a1f160-bd6b-8040-ad92-58af64d6d2dc&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=W19d-T3OWZCIU1X3O5hjgg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=132" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-TPA</td><td class='num'>$117</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0612TPA1?t=G417965671001796627400000945BNAFLLTPA_1ef2e8983e3213acc66ec3b61254d49c_9664&amp;search_date=16112026&amp;expected_price_uuid=01a1e52c-5417-8040-a32a-cfbf042d18e0&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=nBLzZIv_HN5j1ApxZNPJXA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=117" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-DFW</td><td class='num'>$83</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0112DFW1?t=F917961364201796170200000563BNAMCODFW_3cb1dcf61ff7706fd13a4c5846d53d0c_6813&amp;search_date=21112026&amp;expected_price_uuid=01a1fe1f-2897-8030-6fc1-14df739cdb3e&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=_BYEWpSLGIjtI9XDWKlAhQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=83" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-FLL</td><td class='num'>$67</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA2411FLL1?t=G417955097801795521120000129BNAFLL_6e27a154eef36c22b5b0a3668ef97948_5550&amp;search_date=16112026&amp;expected_price_uuid=01a1e231-1a6c-8040-265a-75a4b1015491&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=XOdIvwsCkReqE9Abb09YjA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=67" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 13:01 UTC</td><td>BNA-CHI</td><td class='num'>$83</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0112CHI1?t=F917961364201796173140000612BNAMCOORD_bbc6f33b06b5d13a23951e266cb06fef_6813&amp;search_date=21112026&amp;expected_price_uuid=01a1fcc3-059a-8030-e959-30673ac804ee&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=y-C8RTXvsoJXCNKdydRfGQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=83" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
+<tr><td>Nov 21, 2026 07:15 UTC</td><td>LAX-DEN</td><td class='num'>$63</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX1012DEN1?t=F917969031001796915640000149LAXDEN_cdf31dc06d92b807e980ccf7bd97a5b4_5219&amp;search_date=14112026&amp;expected_price_uuid=01a1da07-b773-8040-ad8e-448366b0b342&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=BlkD-3FjgjyTSUc20luQng&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=63" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
 <tr><td>Nov 21, 2026 07:15 UTC</td><td>LAX-PDX</td><td class='num'>$98</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX1512PDX1?t=F917973144001797351000000610LAXDENPDX_12905efddd3026050f4897a27f03d986_8118&amp;search_date=14112026&amp;expected_price_uuid=01a1d9c3-c70d-8040-a24d-bae38d641d40&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=hjpHDVAIvdT5OOjO4_vpPg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=98" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
 <tr><td>Nov 21, 2026 07:15 UTC</td><td>LAX-BOS</td><td class='num'>$142</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX0512BOS1?t=F917964898201796553540000882LAXATLBOS_8d31352f5498764b9f612f6cfae17a1a_11651&amp;search_date=20112026&amp;expected_price_uuid=01a1f847-c9c3-8040-6d53-9fe2ba446c75&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=vM_79DV8dGE9H8k8DzQubQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=142" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
 <tr><td>Nov 21, 2026 01:17 UTC</td><td>LAX-PHX</td><td class='num'>$118</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX1512PHX1?t=WN17973429001797351900000090BURPHX_9f0177e0434258347d68246b9992caef_9802&amp;search_date=14112026&amp;expected_price_uuid=01a1da76-cd51-8040-68c5-d885461bada4&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=o_P45GqfPWBS1tXiuuH3Gg&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=118" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
@@ -979,12 +985,6 @@ window.addEventListener("DOMContentLoaded", () => {
 <tr><td>Nov 20, 2026 19:05 UTC</td><td>BNA-CLT</td><td class='num'>$132</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA3011CLT1?t=AA17960291401796038080000089BNACLT_d276a85b168a1a6b4237a7bdecd499a2_10801&amp;search_date=20112026&amp;expected_price_uuid=01a1f988-fc92-8030-a46e-11b6fa67edbc&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=WYLbgKwvS3LqoaJ2tj9kgA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=132" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
 <tr><td>Nov 20, 2026 19:05 UTC</td><td>BNA-HOU</td><td class='num'>$134</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0101HOU1?t=WN17987913001798799100000130BNAHOU_0d31a288cd654a354bc419e305b41c67_11082&amp;search_date=13112026&amp;expected_price_uuid=01a1d619-1478-8040-acf3-99d5a3d1ae12&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6ARNsL3rlB34ftuvD_cdmw&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=134" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
 <tr><td>Nov 20, 2026 19:05 UTC</td><td>BNA-NYC</td><td class='num'>$145</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA2611NYC1?t=F917957046001795729980000363BNAMCOEWR_7d21b1bb3bf88e8800700232e9b8d21f_12011&amp;search_date=15112026&amp;expected_price_uuid=01a1ddff-769f-8040-6d75-6070a9496edb&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=rDEB5mLBMs15_ELAWSLV0w&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=145" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>LAX-ATL</td><td class='num'>$103</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX0912ATL1?t=F917967978001796853240000744LAXIAHATL_a05b9f7f2d2ce7e809e38e41c48e93f7_8485&amp;search_date=19112026&amp;expected_price_uuid=01a1f1f7-6428-8040-226c-cbe821d64266&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=y7P2MQg0jmFTFOyShj5FiA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=103" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>LAX-SGN</td><td class='num'>$270</td><td>well below the recent average ($338.11)</td><td><a href="https://www.aviasales.com/search/LAX1702SGN1?t=YP18028578001802991600001330LAXICNSGN_2ae3d28198f36be8383a478183e14fca_22185&amp;search_date=20112026&amp;expected_price_uuid=01a1f68e-e1d0-8040-2775-0290327bf4a2&amp;static_fare_key=TY%7CP1%7CH0%7CL1_1_20%7CCH0%7CR0%7CTBC1&amp;itinerary_key=3p8_RB6yBsdIgvZ5SGg7og&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=270" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>LAX-FLL</td><td class='num'>$141</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX2703FLL1?t=B618061632001806232320000972LAXJFKFLL_45286409b8df9d1d68b9009ea38c168b_11580&amp;search_date=17112026&amp;expected_price_uuid=01a1ebac-b2fd-8040-aae5-84b71c3d3038&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=tnBqgrj9z3p1_rRRRiOfVQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=141" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>LAX-NYC</td><td class='num'>$149</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/LAX0104NYC1?t=AS18066168001806647700000335LAXEWR_38cf717e62b728d6ab5de66f913d7bc8_12214&amp;search_date=20112026&amp;expected_price_uuid=01a1f75a-368f-8040-a66e-4dca8abbea78&amp;static_fare_key=TY%7CP0%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=X2gA4APsRTR5RshxfEgILQ&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=149" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>BNA-YTO</td><td class='num'>$117</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA2111YTO1?t=PD17952738001795284900000125BNAYTZ_3798301ab89f043530b876a5013d32ca_9641&amp;search_date=18112026&amp;expected_price_uuid=01a1f068-e38b-8040-2baf-d2267c51a262&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=4s4ZXoJPrC0AP0phJ8PqcA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=117" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
-<tr><td>Nov 20, 2026 13:19 UTC</td><td>BNA-ATL</td><td class='num'>$110</td><td>at/under your $150 anywhere target</td><td><a href="https://www.aviasales.com/search/BNA0701ATL1?t=B617993064001799341080000518BNAFLLMIAATL_e8921214c02937d02da0a040f4228860_9059&amp;search_date=20112026&amp;expected_price_uuid=01a1f77f-e0b6-8031-262f-8a53288930a2&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=TcLTUypvOlqf-yrFpX84AA&amp;expected_price_source=share&amp;expected_price_currency=usd&amp;expected_price=110" target="_blank" rel="noopener noreferrer">view &rarr;</a></td></tr>
       </tbody>
     </table>
     </div>
